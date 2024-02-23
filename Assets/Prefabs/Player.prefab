@@ -206,7 +206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6119512196733645838
 Transform:
   m_ObjectHideFlags: 0
@@ -465,8 +465,9 @@ MonoBehaviour:
   playerHeight: 1.7
   groundDrag: 0.4
   jumpForce: 5
-  jumpCooldown: 0.3
+  jumpCooldown: 0.4
   airMultiplier: 0.6
+  fallMultiplier: 1.4
   isReadyToJump: 1
 --- !u!1 &8578490431206328145
 GameObject:
