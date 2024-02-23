@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 3099531796116704424}
   - component: {fileID: 3579807523101779413}
   - component: {fileID: 8396966409781130112}
+  - component: {fileID: 8347402142802252345}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -375,7 +376,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7386021354108352071}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a9b3f2fed73e6c545b918cf5bcad86e8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -436,6 +437,37 @@ MonoBehaviour:
   input: {fileID: 3579807523101779413}
   movement: {x: 0, y: 0}
   look: {x: 0, y: 0}
+  sprint: 0
+  jump: 0
+--- !u!114 &8347402142802252345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386021354108352071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9964e6cc2533f14cba54180ef5dd7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputs: {fileID: 8396966409781130112}
+  rb: {fileID: 2774589526462708000}
+  walkSpeed: 350
+  maxWalkSpeed: 4
+  runSpeed: 500
+  maxRunSpeed: 6
+  decelerateAmount: 0.1
+  isGrounded: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  playerHeight: 1.7
+  groundDrag: 0.4
+  jumpForce: 5
+  jumpCooldown: 0.3
+  airMultiplier: 0.6
+  isReadyToJump: 1
 --- !u!1 &8578490431206328145
 GameObject:
   m_ObjectHideFlags: 0

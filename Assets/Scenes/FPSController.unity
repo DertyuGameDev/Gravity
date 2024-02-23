@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 1553606598}
   - component: {fileID: 1553606597}
   - component: {fileID: 1553606596}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553606595}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 55f748a59e1254a44803b799b8b11ccb, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -392,6 +392,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2774589526462708000, guid: c9a24ed0931f1424a8b7a8f20fdb3b2a, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4421546473901006370, guid: c9a24ed0931f1424a8b7a8f20fdb3b2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.672041
@@ -432,6 +436,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8347402142802252345, guid: c9a24ed0931f1424a8b7a8f20fdb3b2a, type: 3}
+      propertyPath: jumpCooldown
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347402142802252345, guid: c9a24ed0931f1424a8b7a8f20fdb3b2a, type: 3}
+      propertyPath: airMultiplier
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347402142802252345, guid: c9a24ed0931f1424a8b7a8f20fdb3b2a, type: 3}
+      propertyPath: fallMultiplier
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8578490431206328145, guid: c9a24ed0931f1424a8b7a8f20fdb3b2a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -445,8 +461,8 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1247775714}
   - {fileID: 873069659}
   - {fileID: 1246928508}
   - {fileID: 1553606599}
+  - {fileID: 1247775714}
   - {fileID: 978318393420471085}
