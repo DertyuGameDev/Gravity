@@ -24,13 +24,12 @@ public class SubtitleManager : MonoBehaviour
         SetOpacity(0f);
     }
 
-    public void DisplaySubtitle(string text, float duration)
+    public void DisplaySubtitle(Subtitle subtitle)
     {
-        _subtitlesQueue.Enqueue(new Subtitle(text, duration));
+        _subtitlesQueue.Enqueue(subtitle);
 
         if (!_isProcessing)
         {
-            SetOpacity(1f);
             StartCoroutine(ProcessSubtitlesQueue());
         }
     }
@@ -41,8 +40,14 @@ public class SubtitleManager : MonoBehaviour
         while (_subtitlesQueue.Count > 0)
         {
             var currentSubtitle = _subtitlesQueue.Dequeue();
-            _textBox.text = currentSubtitle.Text;
-            yield return new WaitForSeconds(currentSubtitle.Duration);
+
+            _textBox.text = currentSubtitle.text;
+            _textBox.color = currentSubtitle.color;
+            _textBox.fontStyle = currentSubtitle.fontStyle;
+
+            SetOpacity(1f);
+
+            yield return new WaitForSeconds(currentSubtitle.duration);
         }
 
         SetOpacity(0f);
@@ -58,7 +63,7 @@ public class SubtitleManager : MonoBehaviour
     private void SetOpacity(float value)
     {
         SetGraphicOpacity(_textBox, value);
-        SetGraphicOpacity(_textBackground, value / 2.5f);
+        SetGraphicOpacity(_textBackground, value / 3f);
     }
 
     private static void SetGraphicOpacity(Graphic graphic, float value)

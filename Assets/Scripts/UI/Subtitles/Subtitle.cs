@@ -1,11 +1,23 @@
-﻿public class Subtitle
-{
-    public string Text { get; private set; }
-    public float Duration { get; private set; }
+﻿using System;
+using TMPro;
+using UnityEngine;
 
-    public Subtitle(string text, float duration)
+[Serializable]
+public class Subtitle
+{
+    public string text;
+    public float duration;
+    public Color color;
+    public FontStyles fontStyle;
+
+    public Subtitle()
     {
-        Text = text;
-        Duration = duration;
+    }
+
+    public Subtitle(string text, float duration, Color color)
+    {
+        this.text = text;
+        this.duration = duration;
+        this.color = color;
     }
 }
