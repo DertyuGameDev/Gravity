@@ -9,9 +9,6 @@ public class PushMode : AllModes
 
     [Header("Config")]
     [SerializeField] float force;
-    [SerializeField] float range;
-    [SerializeField] int[] layersAffect;
-    [SerializeField] Collider[] collidersTarget;
     [SerializeField] List<Detector> targets;
 
     private void Update()
@@ -39,24 +36,11 @@ public class PushMode : AllModes
         {
             Push(item.gameObject);
         }
-        /*
-        collidersTarget = Physics.OverlapCapsule(transform.position + Camera.main.transform.forward * 1
-                                                , transform.position + Camera.main.transform.forward * range
-                                                , 3);
-
-        foreach (Collider collider in collidersTarget)
-        {
-            foreach (int layer in layersAffect)
-            {
-                if (collider.gameObject.layer == layer)
-                {
-                    Push(collider.gameObject);
-                }
-            }
-        }*/
     }
     void Push(GameObject target)
     {
-        target.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
+        Rigidbody rb = target.GetComponent<Rigidbody>();
+        rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
+        rb.useGravity = true;
     }
 }

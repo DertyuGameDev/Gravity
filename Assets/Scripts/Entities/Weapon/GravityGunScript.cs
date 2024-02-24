@@ -131,6 +131,11 @@ public class GravityGunScript : MonoBehaviour
     }
     public void DeselectTarget()
     {
+        if (pullModeScript.enabled)
+            return;
+        if (freezeModeScript.enabled && freezeModeScript.freezeMode)
+            return;
+
         if (actualTarget != null)
             actualTarget.GetComponent<Rigidbody>().useGravity = true;
         actualTarget = null;

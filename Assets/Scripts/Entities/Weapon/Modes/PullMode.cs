@@ -39,6 +39,7 @@ public class PullMode : AllModes
         target = ObjectDetection.getSelected().gameObject;
         target.transform.parent = null;
         target.GetComponent<Rigidbody>().useGravity = false;
+        target.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         gravityGunScript.actualTarget = target;
         gravityGunScript.smooth = smooth;
@@ -53,5 +54,6 @@ public class PullMode : AllModes
     void PullTarget(float delta)
     {
         target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
+        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth/2);
     }
 }
