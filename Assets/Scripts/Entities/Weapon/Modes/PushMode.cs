@@ -17,13 +17,13 @@ public class PushMode : AllModes
     }
     public void Fire()
     {
-        if (gravityGunScript.actualTarget == null)
+        if (gravityGunScript.target == null)
         {
             DetectEntity();
             return;
         }
 
-        GameObject obj = gravityGunScript.actualTarget;
+        GameObject obj = gravityGunScript.target;
         gravityGunScript.DeselectTarget();
         Push(obj);    
         

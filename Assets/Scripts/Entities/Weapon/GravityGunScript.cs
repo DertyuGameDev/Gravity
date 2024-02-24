@@ -7,10 +7,11 @@ public class GravityGunScript : MonoBehaviour
     [Header("External References")]
     [SerializeField] PlayerInputs input;
     [SerializeField] Animator animator;
-    [HideInInspector] public GameObject actualTarget;
+    [HideInInspector] public GameObject target;
     [HideInInspector] public Transform finalPos;
     Vector3 velRef = Vector3.zero;
     [HideInInspector] public float smooth;
+    [HideInInspector] public Rigidbody targetRB;
     
 
     [Header("References Modes")]
@@ -31,7 +32,7 @@ public class GravityGunScript : MonoBehaviour
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
 
-        if (actualTarget != null && !pullModeScript.enabled)
+        if (target != null && !pullModeScript.enabled)
             PullTarget(newDelta);
     }
 
@@ -127,7 +128,16 @@ public class GravityGunScript : MonoBehaviour
     #region - TARGET -
     void PullTarget(float delta)
     {
-        actualTarget.transform.position = Vector3.SmoothDamp(actualTarget.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
+        if (Vector3.Distance(finalPos.transform.position, target.transform.position) > 0.5f)
+            targetRB.velocity = (finalPos.transform.position - target.transform.position) * smooth * 2 * delta;
+        else
+        {
+            targetRB.velocity = Vector3.zero;
+            target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth / 10);
+        }
+
+        //target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
+        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth / 2);
     }
     public void DeselectTarget()
     {
@@ -136,9 +146,12 @@ public class GravityGunScript : MonoBehaviour
         if (freezeModeScript.enabled && freezeModeScript.freezeMode)
             return;
 
-        if (actualTarget != null)
-            actualTarget.GetComponent<Rigidbody>().useGravity = true;
-        actualTarget = null;
+        if (target != null)
+        {
+            target.GetComponent<Rigidbody>().useGravity = true;
+        }
+            
+        target = null;
         pullModeScript.target = null;
     }
     #endregion

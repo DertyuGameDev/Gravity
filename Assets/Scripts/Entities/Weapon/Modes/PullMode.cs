@@ -15,6 +15,7 @@ public class PullMode : AllModes
     [SerializeField] Transform finalPos;
     [SerializeField] float smooth;
     Vector3 velRef;
+    Rigidbody targetRB;
 
     private void LateUpdate()
     {
@@ -40,10 +41,12 @@ public class PullMode : AllModes
         target.transform.parent = null;
         target.GetComponent<Rigidbody>().useGravity = false;
         target.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        targetRB = target.GetComponent<Rigidbody>();
 
-        gravityGunScript.actualTarget = target;
+        gravityGunScript.target = target;
         gravityGunScript.smooth = smooth;
         gravityGunScript.finalPos = finalPos;
+        gravityGunScript.targetRB = targetRB;
     }
     void DeselectTarget()
     {
@@ -53,7 +56,15 @@ public class PullMode : AllModes
     }
     void PullTarget(float delta)
     {
-        target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
+        if (Vector3.Distance(finalPos.transform.position, target.transform.position) > 0.5f)
+            targetRB.velocity = (finalPos.transform.position - target.transform.position) * smooth * 2 * delta;
+        else
+        {
+            targetRB.velocity = Vector3.zero;
+            target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth / 10);
+        }
+            
+        //target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
         target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth/2);
     }
 }

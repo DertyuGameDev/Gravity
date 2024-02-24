@@ -422,7 +422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6882218136875486381}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CameraPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,6 +516,7 @@ Transform:
   - {fileID: 744377486482825561}
   - {fileID: 8117460181140832361}
   - {fileID: 1371863020725513825}
+  - {fileID: 4122403128431889495}
   m_Father: {fileID: 5803814408853239660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3600199242240842469
@@ -594,6 +595,37 @@ MonoBehaviour:
   sensX: 5
   sensY: 7
   smooth: 5
+--- !u!1 &4513694618892987073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4122403128431889495}
+  m_Layer: 0
+  m_Name: FinalPosPull
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4122403128431889495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513694618892987073}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3069495546199834464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6021157187605488362
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +637,7 @@ GameObject:
   - component: {fileID: 6119512196733645838}
   - component: {fileID: 3803771557898749653}
   - component: {fileID: 1291291541909281319}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,9 +760,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 8396966409781130112}
   animator: {fileID: 0}
-  actualTarget: {fileID: 0}
+  target: {fileID: 0}
   finalPos: {fileID: 0}
   smooth: 0
+  targetRB: {fileID: 0}
   pullModeScript: {fileID: 7916732454732625938}
   pushModeScript: {fileID: 504903143039250698}
   freezeModeScript: {fileID: 4907744659432430394}
@@ -753,8 +786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityGunScript: {fileID: 690040721721551395}
   target: {fileID: 0}
-  finalPos: {fileID: 2219862280781385078}
-  smooth: 1
+  finalPos: {fileID: 4122403128431889495}
+  smooth: 50
 --- !u!114 &504903143039250698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,9 +802,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityGunScript: {fileID: 690040721721551395}
   force: 20
-  range: 3
-  layersAffect: 0600000007000000
-  collidersTarget: []
   targets: []
 --- !u!114 &4907744659432430394
 MonoBehaviour:
@@ -785,9 +815,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26de51630652cb3488e40e1e8e3abf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeMode: 0
   target: {fileID: 0}
-  range: 5
-  layersAffect: 0600000007000000
+  secondsFreeze: 3
 --- !u!1 &7386021354108352071
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +832,7 @@ GameObject:
   - component: {fileID: 3579807523101779413}
   - component: {fileID: 8396966409781130112}
   - component: {fileID: 8347402142802252345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
