@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SubtitleTest : MonoBehaviour
 {
@@ -14,6 +13,6 @@ public class SubtitleTest : MonoBehaviour
     {
         if (!Input.GetKeyDown(KeyCode.T)) return;
 
-        _subtitleManager.DisplaySubtitle("TEST-" + Time.deltaTime, 2f);
+        _subtitleManager.DisplaySubtitle(new Subtitle("TEST-" + Time.deltaTime, 2f, Color.white));
     }
 }
