@@ -17,7 +17,11 @@ public class CameraLook : MonoBehaviour
 
     float yRotation;
     float xRotation;
-
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
     // Update is called once per frame
     void Update()
     {
