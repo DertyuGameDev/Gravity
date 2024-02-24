@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushMode : AllModes
+public class PushMode1 : AllModes
 {
     [Header("External References")]
     [SerializeField] GravityGunScript gravityGunScript;
