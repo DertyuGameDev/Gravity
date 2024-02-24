@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PullMode : AllModes
+public class PullMode : MonoBehaviour
 {
     [Header("External References")]
     [SerializeField] GravityGunScript gravityGunScript;
