@@ -770,7 +770,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2520881077547232270}
   - component: {fileID: 2019187554054930377}
-  - component: {fileID: 2552432508532937512}
   m_Layer: 0
   m_Name: GunCam
   m_TagString: Untagged
@@ -844,14 +843,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2552432508532937512
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8450625332316509902}
-  m_Enabled: 1
 --- !u!1 &8578490431206328145
 GameObject:
   m_ObjectHideFlags: 0
