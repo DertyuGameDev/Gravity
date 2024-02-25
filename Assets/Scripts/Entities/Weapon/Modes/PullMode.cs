@@ -17,6 +17,10 @@ public class PullMode : MonoBehaviour
     Vector3 velRef, rotationId = Vector3.zero;
     Rigidbody targetRB;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip pullClip;
+
     private void Update()
     {
         finalPos.rotation = Quaternion.Euler(rotationId);
@@ -26,6 +30,7 @@ public class PullMode : MonoBehaviour
         if (target != null)
             PullTarget(newDelta);
     }
+
     public void Fire()
     {
         if (target == null)
@@ -33,10 +38,14 @@ public class PullMode : MonoBehaviour
         else
             DeselectTarget();
     }
+
     void SelectTarget()
     {
         if (ObjectDetection.getSelected() == null)
             return;
+
+        audioSource.clip = pullClip;
+        audioSource.Play();
 
         target = ObjectDetection.getSelected().gameObject;
         target.transform.parent = null;
@@ -49,6 +58,7 @@ public class PullMode : MonoBehaviour
         gravityGunScript.finalPos = finalPos;
         gravityGunScript.targetRB = targetRB;
     }
+
     void DeselectTarget()
     {
         if (target != null)
@@ -57,6 +67,7 @@ public class PullMode : MonoBehaviour
         target = null;
         rotationId = Vector3.zero;
     }
+
     void PullTarget(float delta)
     {
         if (Vector3.Distance(finalPos.transform.position, target.transform.position) > 0.5f)
@@ -64,13 +75,14 @@ public class PullMode : MonoBehaviour
         else
         {
             targetRB.velocity = Vector3.zero;
-            target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth / 10);
+            target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position,
+                ref velRef, delta * smooth / 10);
         }
-            
+
         //target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
-        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth/2);
+        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth / 2);
     }
-    
+
     public void ResetValues()
     {
         target = null;
