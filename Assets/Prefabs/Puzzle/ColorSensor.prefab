@@ -125,12 +125,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_ObjectArgument: {fileID: 4383194632135955539}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -138,10 +138,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 4383194632135955539}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
@@ -775,12 +775,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_ObjectArgument: {fileID: 7277428293137004963}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -788,10 +788,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 7277428293137004963}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1090,11 +1090,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6719263837201147042}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
           m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1103,10 +1103,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 6719263837201147042}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1521,12 +1521,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_ObjectArgument: {fileID: 5016620623110850720}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1534,10 +1534,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 5016620623110850720}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1668,12 +1668,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_ObjectArgument: {fileID: 6564734670186397566}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1681,10 +1681,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 6564734670186397566}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1899,12 +1899,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_ObjectArgument: {fileID: 8754785423809118108}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1912,10 +1912,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 8754785423809118108}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2046,12 +2046,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_ObjectArgument: {fileID: 2507805899381804297}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2059,10 +2059,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 2507805899381804297}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2457,7 +2457,19 @@ MonoBehaviour:
   - {fileID: 155021662800294174}
   correctEv:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   incorrectEv:
     m_PersistentCalls:
       m_Calls: []
@@ -2586,12 +2598,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 5542052323553960158}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2599,10 +2611,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 5542052323553960158}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2939,12 +2951,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_ObjectArgument: {fileID: 1360381763864080278}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2952,10 +2964,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 1360381763864080278}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3169,12 +3181,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
-        m_MethodName: addCode
-        m_Mode: 3
+        m_MethodName: addColor
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_ObjectArgument: {fileID: 1932100954759118016}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3182,10 +3194,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6522087198795277247}
         m_TargetAssemblyTypeName: ColorCode, Assembly-CSharp
         m_MethodName: addCode
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 1932100954759118016}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
