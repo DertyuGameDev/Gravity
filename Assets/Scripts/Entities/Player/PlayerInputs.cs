@@ -9,6 +9,7 @@ public class PlayerInputs : MonoBehaviour
     [Header("External References")]
     [SerializeField] PlayerInput input;
     [SerializeField] GravityGunScript gravityGunScript;
+    [SerializeField] PlayerInteraction playerInteraction;
 
     [Header("Flags")]
     public Vector2 movement;
@@ -18,6 +19,7 @@ public class PlayerInputs : MonoBehaviour
     public Vector2 mouseWheel;
     public bool[] numericKeyPressed;
     public bool leftClick;
+    public bool interact;
 
     void OnLook(InputValue value)
     {
@@ -65,5 +67,12 @@ public class PlayerInputs : MonoBehaviour
 
         if (leftClick)
             gravityGunScript.Fire();
+    }
+    void OnInteract(InputValue value)
+    {
+        interact = value.Get<float>() > 0 ? true : false;
+
+        if (interact)
+            playerInteraction.Interact();
     }
 }

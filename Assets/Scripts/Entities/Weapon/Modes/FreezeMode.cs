@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class FreezeMode : MonoBehaviour
 {
+    [Header("External References")]
+    [SerializeField] GravityGunScript gravityGunScript;
+
     [Header("Config")]
-    public bool freezeMode;
     [SerializeField] GameObject target;
     [SerializeField] float secondsFreeze;
     public void Fire()
@@ -19,10 +21,16 @@ public class FreezeMode : MonoBehaviour
             return;
 
         target = ObjectDetection.getSelected().gameObject;
-        freezeMode = true;
+
+        gravityGunScript.target = target;
 
         FreezeCheck script = target.GetComponent<FreezeCheck>();
+        script.gravityGunScript = gravityGunScript;
         script.enabled = true;
         script.FreezeTarget(secondsFreeze);
+    }
+    public void ResetValues()
+    {
+        target = null;
     }
 }

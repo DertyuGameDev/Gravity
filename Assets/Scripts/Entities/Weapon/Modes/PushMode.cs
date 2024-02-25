@@ -24,7 +24,7 @@ public class PushMode : MonoBehaviour
         }
 
         GameObject obj = gravityGunScript.target;
-        gravityGunScript.DeselectTarget();
+        gravityGunScript.target = null;
         Push(obj);    
         
     }
@@ -42,5 +42,9 @@ public class PushMode : MonoBehaviour
         Rigidbody rb = target.GetComponent<Rigidbody>();
         rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
         rb.useGravity = true;
+    }
+    public void ResetValues()
+    {
+        targets = null;
     }
 }
