@@ -7,6 +7,7 @@ public class GravityGunScript : MonoBehaviour
     [Header("External References")]
     [SerializeField] PlayerInputs input;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject[] hud;
     public GameObject target;
     public Transform finalPos;
     Vector3 velRef = Vector3.zero;
@@ -116,6 +117,9 @@ public class GravityGunScript : MonoBehaviour
 
                 freezeModeScript.enabled = false;
                 freezeModeScript.ResetValues();
+                hud[0].SetActive(true);
+                hud[1].SetActive(false);
+                hud[2].SetActive(false);
                 break;
             case 1:
                 pullModeScript.enabled = false;
@@ -129,6 +133,9 @@ public class GravityGunScript : MonoBehaviour
                 freezeModeScript.ResetValues();
 
                 Invoke(nameof(DeselectTarget), timeToPreserveTarget);
+                hud[0].SetActive(false);
+                hud[1].SetActive(true);
+                hud[2].SetActive(false);
                 break;
             case 2:
                 pullModeScript.enabled = false;
@@ -140,6 +147,9 @@ public class GravityGunScript : MonoBehaviour
                 freezeModeScript.enabled = true;
                 
                 Invoke(nameof(DeselectTarget), timeToPreserveTarget);
+                hud[0].SetActive(false);
+                hud[1].SetActive(false);
+                hud[2].SetActive(true);
                 break;
         }
     }
