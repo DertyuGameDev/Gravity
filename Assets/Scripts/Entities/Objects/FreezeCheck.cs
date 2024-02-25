@@ -42,7 +42,7 @@ public class FreezeCheck : MonoBehaviour
             alreadyFreeze = true;
         }
     }
-    void Defrost()
+    public void Defrost()
     {
         rb.freezeRotation = false;
         rb.angularVelocity = previousRot;

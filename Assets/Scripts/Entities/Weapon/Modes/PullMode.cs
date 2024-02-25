@@ -37,12 +37,17 @@ public class PullMode : MonoBehaviour
         if (ObjectDetection.getSelected() == null)
             return;
 
+        if (gravityGunScript.TargetIsFreeze())
+            gravityGunScript.target.GetComponent<FreezeCheck>().Defrost();
+
+
         target = ObjectDetection.getSelected().gameObject;
         target.transform.parent = null;
         target.GetComponent<Rigidbody>().useGravity = false;
         target.GetComponent<Rigidbody>().velocity = Vector3.zero;
         targetRB = target.GetComponent<Rigidbody>();
 
+        
         gravityGunScript.target = target;
         gravityGunScript.smooth = smooth;
         gravityGunScript.finalPos = finalPos;

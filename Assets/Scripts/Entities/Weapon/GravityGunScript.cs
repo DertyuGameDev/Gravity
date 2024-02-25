@@ -188,7 +188,7 @@ public class GravityGunScript : MonoBehaviour
         target = null;
         pullModeScript.target = null;
     }
-    bool TargetIsFreeze()
+    public bool TargetIsFreeze()
     {
         if (freezeModeScript.enabled)
         {
