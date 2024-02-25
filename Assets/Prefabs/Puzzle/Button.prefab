@@ -120,6 +120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
+  onButtonTriggered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7027986469079461439
 GameObject:
   m_ObjectHideFlags: 0
