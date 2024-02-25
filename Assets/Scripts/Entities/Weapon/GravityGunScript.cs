@@ -31,6 +31,10 @@ public class GravityGunScript : MonoBehaviour
     float velX;
     float velY;
 
+    public void Update()
+    {
+        
+    }
     private void LateUpdate()
     {
         //This help when the V-Sync is desactivated
