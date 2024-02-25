@@ -12,7 +12,6 @@ public class GravityGunScript : MonoBehaviour
     Vector3 velRef = Vector3.zero;
     [HideInInspector] public float smooth;
     [HideInInspector] public Rigidbody targetRB;
-    
 
     [Header("References Modes")]
     [SerializeField] PullMode pullModeScript;
@@ -27,16 +26,34 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] float useCooldown;
     [SerializeField] float timeToPreserveTarget;
 
+    [Header("Animation")]
+    [SerializeField] float smoothAnim;
+    float velX;
+    float velY;
+
     private void LateUpdate()
     {
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
+
+        SetAnimatorVariables();
 
         if (target != null && !pullModeScript.enabled)
             PullTarget(newDelta);
     }
 
 
+    #region - ANIMATIONS -
+    void SetAnimatorVariables()
+    {
+        animator.SetBool("isMoving",input.movement.magnitude != 0 ? true : false);
+
+        velX = Mathf.Lerp(velX,input.movement.x,Time.deltaTime * smoothAnim);
+        velY = Mathf.Lerp(velY,input.movement.y,Time.deltaTime * smoothAnim);
+        animator.SetFloat("VelX", velX);
+        animator.SetFloat("VelY", velY);
+    }
+    #endregion
     #region - CHANGE MODE -
     public void DefineIndex(int index)
     {
@@ -76,6 +93,7 @@ public class GravityGunScript : MonoBehaviour
     }
     void ActivateModeScript(int index)
     {
+        animator.SetTrigger("ChangeMode");
         switch (index)
         {
             case 0:
