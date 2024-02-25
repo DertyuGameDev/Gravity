@@ -166,7 +166,6 @@ public class GravityGunScript : MonoBehaviour
     #region - TARGET -
     void PullTarget(float delta)
     {
-
         if (Vector3.Distance(finalPos.transform.position, target.transform.position) > 0.5f)
             targetRB.velocity = (finalPos.transform.position - target.transform.position) * smooth * 2 * delta;
         else
