@@ -17,7 +17,7 @@ public class PullMode : MonoBehaviour
     Vector3 velRef;
     Rigidbody targetRB;
 
-    private void LateUpdate()
+    private void Update()
     {
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
@@ -52,6 +52,7 @@ public class PullMode : MonoBehaviour
     {
         if (target != null)
             target.GetComponent<Rigidbody>().useGravity = true;
+        gravityGunScript.target = null;
         target = null;
     }
     void PullTarget(float delta)
@@ -66,5 +67,11 @@ public class PullMode : MonoBehaviour
             
         //target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
         target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth/2);
+    }
+    
+    public void ResetValues()
+    {
+        target = null;
+        targetRB = null;
     }
 }

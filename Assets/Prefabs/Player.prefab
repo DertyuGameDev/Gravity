@@ -589,6 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 3579807523101779413}
   gravityGunScript: {fileID: 0}
+  playerInteraction: {fileID: 2562905172013247574}
   movement: {x: 0, y: 0}
   look: {x: 0, y: 0}
   sprint: 0
@@ -596,6 +597,7 @@ MonoBehaviour:
   mouseWheel: {x: 0, y: 0}
   numericKeyPressed: 
   leftClick: 0
+  interact: 0
 --- !u!114 &8347402142802252345
 MonoBehaviour:
   m_ObjectHideFlags: 0

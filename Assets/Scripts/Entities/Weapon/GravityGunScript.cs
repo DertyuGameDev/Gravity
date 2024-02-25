@@ -7,7 +7,7 @@ public class GravityGunScript : MonoBehaviour
     [Header("External References")]
     [SerializeField] PlayerInputs input;
     [SerializeField] Animator animator;
-    [HideInInspector] public GameObject target;
+    public GameObject target;
     [HideInInspector] public Transform finalPos;
     Vector3 velRef = Vector3.zero;
     [HideInInspector] public float smooth;
@@ -38,7 +38,7 @@ public class GravityGunScript : MonoBehaviour
 
         SetAnimatorVariables();
 
-        if (target != null && !pullModeScript.enabled)
+        if (target != null && !pullModeScript.enabled && !TargetIsFreeze())
             PullTarget(newDelta);
     }
 
@@ -98,19 +98,33 @@ public class GravityGunScript : MonoBehaviour
         {
             case 0:
                 pullModeScript.enabled = true;
+
                 pushModeScript.enabled = false;
+                pushModeScript.ResetValues();
+
                 freezeModeScript.enabled = false;
+                freezeModeScript.ResetValues();
                 break;
             case 1:
                 pullModeScript.enabled = false;
+                pullModeScript.ResetValues();
+
                 pushModeScript.enabled = true;
+
                 freezeModeScript.enabled = false;
+                freezeModeScript.ResetValues();
+
                 Invoke(nameof(DeselectTarget), timeToPreserveTarget);
                 break;
             case 2:
                 pullModeScript.enabled = false;
+                pullModeScript.ResetValues();
+
                 pushModeScript.enabled = false;
+                pushModeScript.ResetValues();
+
                 freezeModeScript.enabled = true;
+                
                 Invoke(nameof(DeselectTarget), timeToPreserveTarget);
                 break;
         }
@@ -146,6 +160,7 @@ public class GravityGunScript : MonoBehaviour
     #region - TARGET -
     void PullTarget(float delta)
     {
+
         if (Vector3.Distance(finalPos.transform.position, target.transform.position) > 0.5f)
             targetRB.velocity = (finalPos.transform.position - target.transform.position) * smooth * 2 * delta;
         else
@@ -154,14 +169,13 @@ public class GravityGunScript : MonoBehaviour
             target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth / 10);
         }
 
-        //target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
         target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth / 2);
     }
     public void DeselectTarget()
     {
         if (pullModeScript.enabled)
             return;
-        if (freezeModeScript.enabled && freezeModeScript.freezeMode)
+        if (TargetIsFreeze())
             return;
 
         if (target != null)
@@ -171,6 +185,21 @@ public class GravityGunScript : MonoBehaviour
             
         target = null;
         pullModeScript.target = null;
+    }
+    bool TargetIsFreeze()
+    {
+        if (freezeModeScript.enabled)
+        {
+            if (target == null)
+                return false;
+
+            FreezeCheck freezeCheck;
+
+            if (target.TryGetComponent<FreezeCheck>(out freezeCheck))
+                if (freezeCheck.alreadyFreeze)
+                    return true;
+        }
+        return false;
     }
     #endregion
 }

@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class FreezeCheck : MonoBehaviour
 {
+    [Header("External References")]
+    [SerializeField] public GravityGunScript gravityGunScript;
+
     [SerializeField] Rigidbody rb;
-    bool alreadyFreeze;
+    public bool alreadyFreeze;
     public float timeToDefrost;
     Vector3 previousVel;
     Vector3 previousRot;
@@ -13,8 +16,9 @@ public class FreezeCheck : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        enabled = false;
     }
-    private void LateUpdate()
+    private void Update()
     {
         if (timeToDefrost > 0)
         {
@@ -45,6 +49,10 @@ public class FreezeCheck : MonoBehaviour
         rb.velocity = previousVel;
         rb.useGravity = true;
         alreadyFreeze = false;
+
+        if (gravityGunScript.target == gameObject)
+            gravityGunScript.target = null;
+
         enabled = false;
     }
 }

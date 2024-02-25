@@ -284,7 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &202649318
 GameObject:
@@ -447,7 +449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &211593345
 GameObject:
@@ -610,7 +614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &332113874
 GameObject:
@@ -921,7 +927,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &574671220
 GameObject:
@@ -1084,7 +1092,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &640424421
 GameObject:
@@ -1247,7 +1257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &683363705
 GameObject:
@@ -1410,7 +1422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &727941012
 GameObject:
@@ -1573,7 +1587,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1001 &814098411
 PrefabInstance:
@@ -1824,7 +1840,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &980222518
 GameObject:
@@ -1987,7 +2005,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &1010040652
 GameObject:
@@ -2150,7 +2170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &1246928506
 GameObject:
@@ -2438,7 +2460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &1553606595
 GameObject:
@@ -2734,7 +2758,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &1659317013
 GameObject:
@@ -2897,7 +2923,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &1819751274
 GameObject:
@@ -3060,7 +3088,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &1835428420
 GameObject:
@@ -3208,7 +3238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &1947157033
 GameObject:
@@ -3371,7 +3403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityGunScript: {fileID: 0}
   rb: {fileID: 0}
+  alreadyFreeze: 0
   timeToDefrost: 0
 --- !u!1 &2110271926
 GameObject:
