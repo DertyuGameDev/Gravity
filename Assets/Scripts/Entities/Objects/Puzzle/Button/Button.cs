@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class Button : MonoBehaviour
 {
@@ -28,7 +24,7 @@ public class Button : MonoBehaviour
     {
         if (_cooldownTimer > 0) return;
 
-        Debug.Log($"{transform.gameObject.name} pressed!");
+        Debug.Log($"[SIMPLE BUTTON] {gameObject} pressed!");
         _animator.SetTrigger(ButtonAnimatorParameters.Activate);
         onButtonTriggered?.Invoke();
         _cooldownTimer = cooldown;

@@ -10,13 +10,13 @@ public class SwitchActivator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log($"[GROUND BUTTON] {other.gameObject} placed on {transform.parent.gameObject}");
         OnObjectPlaced?.Invoke(other.gameObject);
-        Debug.Log($"{other.gameObject.name} placed on {transform.parent.gameObject.name}");
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log($"[GROUND BUTTON] {other.gameObject} removed from {transform.parent.gameObject}");
         OnObjectRemoved?.Invoke(other.gameObject);
-        Debug.Log($"{other.gameObject.name} removed from {transform.parent.gameObject.name}");
     }
 }
