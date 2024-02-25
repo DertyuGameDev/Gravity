@@ -31,19 +31,15 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] float smoothAnim;
     float velX;
     float velY;
-
+    Vector3 rotation;
     public void Update()
     {
         if (target != null)
         {
             if (input.rotate != Vector3.zero)
             {
-                finalPos.transform.Rotate(input.rotate * rotateSpeed * Time.deltaTime, Space.World);
+                target.transform.Rotate(input.rotate * rotateSpeed * Time.deltaTime,Space.World);
             }
-        }
-        else {
-
-            finalPos.transform.eulerAngles = Vector3.zero;
         }
     }
     private void LateUpdate()
@@ -67,6 +63,7 @@ public class GravityGunScript : MonoBehaviour
         velY = Mathf.Lerp(velY,input.movement.y,Time.deltaTime * smoothAnim);
         animator.SetFloat("VelX", velX);
         animator.SetFloat("VelY", velY);
+        animator.SetBool("isPulling",pullModeScript.enabled&&target!=null);
     }
     #endregion
     #region - CHANGE MODE -
@@ -160,9 +157,11 @@ public class GravityGunScript : MonoBehaviour
                 break;
             case 1:
                 pushModeScript.Fire();
+                animator.SetTrigger("Push");
                 break;
             case 2:
                 freezeModeScript.Fire();
+                animator.SetTrigger("Freeze");
                 break;
         }
 
@@ -185,8 +184,9 @@ public class GravityGunScript : MonoBehaviour
             targetRB.velocity = Vector3.zero;
             target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth / 10);
         }
-
-        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth / 2);
+        Quaternion finalrot = new Quaternion();
+        //finalrot.eulerAngles = finalPos.rotation.eulerAngles + rotation.eulerAngles;
+        //target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalrot, delta * smooth / 2);
     }
     public void DeselectTarget()
     {

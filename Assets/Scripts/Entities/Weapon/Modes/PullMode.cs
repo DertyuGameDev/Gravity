@@ -80,7 +80,6 @@ public class PullMode : MonoBehaviour
         }
 
         //target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
-        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth / 2);
     }
 
     public void ResetValues()
