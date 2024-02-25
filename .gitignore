@@ -73,3 +73,5 @@ crashlytics-build.properties
 
 # Idea IDE
 .idea/*
+Assets/Art/Scd.unity
+Assets/Art/Scd.unity.meta
