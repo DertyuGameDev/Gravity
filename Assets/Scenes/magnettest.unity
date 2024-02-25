@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &28560510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28560512}
+  - component: {fileID: 28560511}
+  m_Layer: 0
+  m_Name: pole (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &28560511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28560510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9660791feaa8de442a8f7098ab1a3fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polarity: 0
+  strength: 0
+--- !u!4 &28560512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28560510}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1929366411}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &29309540
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,11 +324,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poles:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 837522773}
+  - {fileID: 401155678}
   interactDistance: 20
   rb: {fileID: 41732494}
-  iresultant: {x: 0, y: 0, z: 0}
 --- !u!135 &41732496
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -368,6 +413,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 837522772}
+  - {fileID: 401155679}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &80227205
@@ -416,6 +462,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   polarity: 0
   strength: 60
+--- !u!1 &232164234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232164236}
+  - component: {fileID: 232164235}
+  m_Layer: 0
+  m_Name: pole (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &232164235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232164234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9660791feaa8de442a8f7098ab1a3fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polarity: 0
+  strength: 0
+--- !u!4 &232164236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232164234}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1054381504}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &334975241
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +553,52 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1189896906}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &401155677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401155679}
+  - component: {fileID: 401155678}
+  m_Layer: 0
+  m_Name: pole (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &401155678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401155677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9660791feaa8de442a8f7098ab1a3fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polarity: 1
+  strength: 0
+--- !u!4 &401155679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401155677}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 41732499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554389088
 GameObject:
@@ -753,11 +891,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poles:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 80227207}
+  - {fileID: 232164235}
   interactDistance: 20
   rb: {fileID: 1054381499}
-  iresultant: {x: 0, y: 0, z: 0}
 --- !u!135 &1054381501
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -843,6 +980,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 80227206}
+  - {fileID: 232164236}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1189896900
@@ -910,7 +1048,6 @@ MonoBehaviour:
   - {fileID: 1355183535}
   interactDistance: 10
   rb: {fileID: 1189896901}
-  iresultant: {x: 0, y: 0, z: 0}
 --- !u!136 &1189896903
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1215,9 +1352,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poles:
   - {fileID: 824642244}
+  - {fileID: 28560511}
   interactDistance: 10
   rb: {fileID: 1929366406}
-  iresultant: {x: 0, y: 0, z: 0}
 --- !u!65 &1929366408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1303,6 +1440,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 824642245}
+  - {fileID: 28560512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999873606
@@ -1416,7 +1554,6 @@ MonoBehaviour:
   - {fileID: 1999873607}
   interactDistance: 10000
   rb: {fileID: 2146462137}
-  iresultant: {x: 0, y: 0, z: 0}
 --- !u!136 &2146462139
 CapsuleCollider:
   m_ObjectHideFlags: 0
