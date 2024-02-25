@@ -944,14 +944,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3860052139698926309, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: smRotation
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860052139698926309, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: useCooldown
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 4421546473901006370, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.14
@@ -992,34 +984,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4911384083596668062, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: smooth
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911384083596668062, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: maxDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911384083596668062, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: smoothRotation
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 6073050655783753834, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: force
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6073050655783753834, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: limit
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8347402142802252345, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: jumpForce
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8347402142802252345, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 72
-      objectReference: {fileID: 0}
     - target: {fileID: 8578490431206328145, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
       propertyPath: m_Name
       value: Player with Gun
@@ -1027,10 +991,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8578490431206328145, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1248850530}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
 --- !u!1 &661639566
 GameObject:
@@ -1715,23 +1676,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1432802351}
   m_SourcePrefab: {fileID: 100100000, guid: 12b2cf1096a4e534e9ae6d249d77717f, type: 3}
---- !u!1 &1248850529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8578490431206328145, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
-  m_PrefabInstance: {fileID: 661329372}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1248850530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248850529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb708ddb9926bf449d06e16cc09a514, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1355267805
 GameObject:
   m_ObjectHideFlags: 0

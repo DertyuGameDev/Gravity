@@ -88,12 +88,12 @@
                 },
                 {
                     "name": "Rotate",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "26997cc0-9193-4573-81c8-4334fde4ca8a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -417,37 +417,48 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "719def30-633f-4442-bdb3-258119f635f7",
-                    "path": "<Keyboard>/f",
+                    "name": "fxc",
+                    "id": "c831faa6-ef17-45a7-9074-e69db551eb41",
+                    "path": "3DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "",
                     "action": "Rotate",
-                    "isComposite": false,
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "ad8742a3-4e2d-41e4-af40-caccccaab70a",
-                    "path": "<Keyboard>/c",
+                    "name": "right",
+                    "id": "5dcc0d3b-d72b-42b4-90da-2cbf5e666814",
+                    "path": "<Keyboard>/F",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Rotate",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "cb7df508-a085-41a5-9e04-b6d58207ded0",
-                    "path": "<Keyboard>/x",
+                    "name": "forward",
+                    "id": "0e03d463-2bac-4d7f-a30b-ab2ea42fedf7",
+                    "path": "<Keyboard>/C",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Rotate",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "up",
+                    "id": "9ce3d55b-476f-4646-8b51-74f3b273a540",
+                    "path": "<Keyboard>/X",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },

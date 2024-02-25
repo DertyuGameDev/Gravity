@@ -18,6 +18,7 @@ public class PlayerInputs : MonoBehaviour
     public bool jump;
     public Vector2 mouseWheel;
     public bool[] numericKeyPressed;
+    public Vector3 rotate;
     public bool leftClick;
     public bool interact;
 
@@ -31,7 +32,7 @@ public class PlayerInputs : MonoBehaviour
     }
     void OnSprint(InputValue value)
     {
-        sprint = value.Get<float>() > 0? true : false;
+        sprint = value.Get<float>() > 0 ? true : false;
     }
     void OnJump(InputValue value)
     {
@@ -74,5 +75,10 @@ public class PlayerInputs : MonoBehaviour
 
         if (interact)
             playerInteraction.Interact();
+    }
+
+    void OnRotate(InputValue value)
+    {
+        rotate = value.Get<Vector3>();
     }
 }
