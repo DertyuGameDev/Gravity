@@ -230,7 +230,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 127
+    m_Bits: 255
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -588,10 +588,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 3579807523101779413}
+  gravityGunScript: {fileID: 0}
   movement: {x: 0, y: 0}
   look: {x: 0, y: 0}
   sprint: 0
   jump: 0
+  mouseWheel: {x: 0, y: 0}
+  numericKeyPressed: 
+  leftClick: 0
 --- !u!114 &8347402142802252345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +836,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
