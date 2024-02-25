@@ -29,4 +29,8 @@ public class Door : MonoBehaviour
         yield return new WaitForSeconds(3);
         this.GetComponent<Door>().enabled = false;
     }
+    public void Open()
+    {
+        StartCoroutine(OpenOnce());
+    }
 }

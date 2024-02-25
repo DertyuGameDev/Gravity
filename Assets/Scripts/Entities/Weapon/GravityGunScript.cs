@@ -25,6 +25,7 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] bool readyToUse;
     [SerializeField] float useCooldown;
     [SerializeField] float timeToPreserveTarget;
+    public Vector3 rotationId = Vector3.zero;
 
     [Header("Animation")]
     [SerializeField] float smoothAnim;
@@ -33,6 +34,7 @@ public class GravityGunScript : MonoBehaviour
 
     private void LateUpdate()
     {
+        finalPos.rotation = Quaternion.Euler(rotationId);
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
 
@@ -187,6 +189,7 @@ public class GravityGunScript : MonoBehaviour
             
         target = null;
         pullModeScript.target = null;
+        rotationId = Vector3.zero;
     }
     bool TargetIsFreeze()
     {

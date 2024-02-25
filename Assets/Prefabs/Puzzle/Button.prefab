@@ -411,7 +411,7 @@ MonoBehaviour:
   onInteraction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 738543565492008149}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: TriggerButton
         m_Mode: 1

@@ -14,11 +14,12 @@ public class PullMode : MonoBehaviour
     [Header("Pull Config")]
     [SerializeField] Transform finalPos;
     [SerializeField] float smooth;
-    Vector3 velRef;
+    Vector3 velRef, rotationId = Vector3.zero;
     Rigidbody targetRB;
 
     private void Update()
     {
+        finalPos.rotation = Quaternion.Euler(rotationId);
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
 
@@ -54,6 +55,7 @@ public class PullMode : MonoBehaviour
             target.GetComponent<Rigidbody>().useGravity = true;
         gravityGunScript.target = null;
         target = null;
+        rotationId = Vector3.zero;
     }
     void PullTarget(float delta)
     {
