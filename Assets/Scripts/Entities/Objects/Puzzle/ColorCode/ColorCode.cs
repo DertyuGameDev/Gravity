@@ -37,7 +37,7 @@ public class ColorCode : MonoBehaviour
 
     public void checkCode() {
         for (int i = 0; i < code.Length; i++) { 
-        
+            
         }
 
     }
