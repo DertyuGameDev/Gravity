@@ -13,6 +13,6 @@ public class SubtitleTest : MonoBehaviour
     {
         if (!Input.GetKeyDown(KeyCode.T)) return;
 
-        _subtitleManager.DisplaySubtitle(new Subtitle("TEST-" + Time.deltaTime, 2f, Color.white));
+        _subtitleManager.DisplaySubtitle(new Subtitle("TEST-" + Time.deltaTime, 2f, Color.white, null));
     }
 }
