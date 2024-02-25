@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class Button : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class Button : MonoBehaviour
     public float cooldown = 2f;
     private float _cooldownTimer;
 
-    public event Action OnButtonTriggered;
+    public UnityEvent onButtonTriggered;
 
     private void Awake()
     {
@@ -28,7 +30,7 @@ public class Button : MonoBehaviour
 
         Debug.Log($"{transform.gameObject.name} pressed!");
         _animator.SetTrigger(ButtonAnimatorParameters.Activate);
-        OnButtonTriggered?.Invoke();
+        onButtonTriggered?.Invoke();
         _cooldownTimer = cooldown;
     }
 }
