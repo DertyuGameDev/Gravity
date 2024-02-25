@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 861521748907258824}
   - component: {fileID: 8676368226738335712}
   - component: {fileID: 738543565492008149}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 107908403471692829}
   - component: {fileID: 7226128123324164263}
   - component: {fileID: 5355331662481797398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trigger
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ MonoBehaviour:
   onInteraction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 738543565492008149}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: TriggerButton
         m_Mode: 1
