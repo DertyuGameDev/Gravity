@@ -17,7 +17,7 @@ TagManager:
   - Gun
   - Player
   - ObjectInHand
-  - 
+  - IgnoreRaycast
   - 
   - 
   - 

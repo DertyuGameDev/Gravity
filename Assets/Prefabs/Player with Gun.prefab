@@ -29892,7 +29892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: {fileID: 7955938109144826741}
-  playerReach: 1
+  playerReach: 2
 --- !u!1 &8584088190038475141
 GameObject:
   m_ObjectHideFlags: 0

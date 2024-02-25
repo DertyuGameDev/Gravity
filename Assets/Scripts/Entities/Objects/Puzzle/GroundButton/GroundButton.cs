@@ -57,7 +57,7 @@ public class GroundButton : MonoBehaviour
 
     private void SetActivation(bool activation)
     {
-        Debug.Log($"Button activation: {activation}");
+        Debug.Log($"[GROUND BUTTON] {gameObject} changed state -> {activation}");
         onButtonChangeState?.Invoke(activation);
         _animator.SetBool(GroundButtonAnimatorParameters.IsActivated, activation);
     }
