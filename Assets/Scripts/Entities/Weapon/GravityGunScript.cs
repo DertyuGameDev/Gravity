@@ -110,6 +110,8 @@ public class GravityGunScript : MonoBehaviour
                 pullModeScript.ResetValues();
 
                 pushModeScript.enabled = true;
+                if (TargetIsFreeze())
+                    target = null;
 
                 freezeModeScript.enabled = false;
                 freezeModeScript.ResetValues();
