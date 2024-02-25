@@ -8,7 +8,7 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] PlayerInputs input;
     [SerializeField] Animator animator;
     public GameObject target;
-    [HideInInspector] public Transform finalPos;
+    public Transform finalPos;
     Vector3 velRef = Vector3.zero;
     [HideInInspector] public float smooth;
     [HideInInspector] public Rigidbody targetRB;
@@ -25,16 +25,29 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] bool readyToUse;
     [SerializeField] float useCooldown;
     [SerializeField] float timeToPreserveTarget;
-    public Vector3 rotationId = Vector3.zero;
+    [SerializeField] float rotateSpeed;
 
     [Header("Animation")]
     [SerializeField] float smoothAnim;
     float velX;
     float velY;
 
+    public void Update()
+    {
+        if (target != null)
+        {
+            if (input.rotate != Vector3.zero)
+            {
+                finalPos.transform.Rotate(input.rotate * rotateSpeed * Time.deltaTime, Space.World);
+            }
+        }
+        else {
+
+            finalPos.transform.eulerAngles = Vector3.zero;
+        }
+    }
     private void LateUpdate()
     {
-        finalPos.rotation = Quaternion.Euler(rotationId);
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
 
@@ -189,7 +202,6 @@ public class GravityGunScript : MonoBehaviour
             
         target = null;
         pullModeScript.target = null;
-        rotationId = Vector3.zero;
     }
     bool TargetIsFreeze()
     {
