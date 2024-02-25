@@ -26,6 +26,7 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] float useCooldown;
     [SerializeField] float timeToPreserveTarget;
     [SerializeField] Vector3 rotationForPull = Vector3.zero;
+    [SerializeField] float smRotation;
 
     [Header("Animation")]
     [SerializeField] float smoothAnim;
@@ -174,7 +175,7 @@ public class GravityGunScript : MonoBehaviour
             target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth / 10);
         }
 
-        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smooth / 2);
+        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smRotation / 2);
     }
     public void DeselectTarget()
     {
