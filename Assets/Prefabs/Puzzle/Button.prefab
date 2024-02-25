@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5155994746722138147}
   - component: {fileID: 861521748907258824}
   - component: {fileID: 8676368226738335712}
-  - component: {fileID: 3732229875071801089}
+  - component: {fileID: 738543565492008149}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3732229875071801089
+--- !u!114 &738543565492008149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,7 +411,7 @@ MonoBehaviour:
   onInteraction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3732229875071801089}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: TriggerButton
         m_Mode: 1

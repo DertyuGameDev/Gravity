@@ -618,6 +618,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   alreadyFreeze: 0
   timeToDefrost: 0
+<<<<<<< Updated upstream
 --- !u!1 &332113874
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +767,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &571297587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,6 +2423,26 @@ MonoBehaviour:
   rb: {fileID: 0}
   alreadyFreeze: 0
   timeToDefrost: 0
+<<<<<<< Updated upstream
+=======
+--- !u!1 &1370223751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8578490431206328145, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
+  m_PrefabInstance: {fileID: 1895657081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1370223756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370223751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb708ddb9926bf449d06e16cc09a514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &1553606595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,6 +3305,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 288639750095903342, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -6898,6 +6922,15 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+=======
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8578490431206328145, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1370223756}
+>>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
 --- !u!1 &1947157033
 GameObject:
@@ -7033,7 +7066,11 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
+<<<<<<< Updated upstream
   m_CollisionDetection: 0
+=======
+  m_CollisionDetection: 2
+>>>>>>> Stashed changes
 --- !u!114 &1947157039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7102,7 +7139,6 @@ SceneRoots:
   - {fileID: 873069659}
   - {fileID: 1246928508}
   - {fileID: 1553606599}
-  - {fileID: 332113879}
   - {fileID: 1247775714}
   - {fileID: 1895657081}
   - {fileID: 2110271927}
