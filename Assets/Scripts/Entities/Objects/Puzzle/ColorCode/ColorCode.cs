@@ -51,15 +51,16 @@ public class ColorCode : MonoBehaviour
             }
         }
     }
-    public void addCode(SpriteRenderer r)
+    public void addColor(SpriteRenderer r)
     {
         if (!checking)
         {
-            disp[attempt.Count-1].color = r.color;
+            disp[attempt.Count].color = r.color;
         }
     }
     public IEnumerator checkCode() {
         bool isCorrect = true;
+        checking = true;
         for (int i = 0; i < code.Length; i++)
         {
             if (code[i] != attempt[i])
