@@ -8,7 +8,7 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] PlayerInputs input;
     [SerializeField] Animator animator;
     public GameObject target;
-    [HideInInspector] public Transform finalPos;
+    public Transform finalPos;
     Vector3 velRef = Vector3.zero;
     [HideInInspector] public float smooth;
     [HideInInspector] public Rigidbody targetRB;
@@ -25,6 +25,7 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] bool readyToUse;
     [SerializeField] float useCooldown;
     [SerializeField] float timeToPreserveTarget;
+    [SerializeField] float rotateSpeed;
 
     [Header("Animation")]
     [SerializeField] float smoothAnim;
@@ -33,7 +34,17 @@ public class GravityGunScript : MonoBehaviour
 
     public void Update()
     {
-        
+        if (target != null)
+        {
+            if (input.rotate != Vector3.zero)
+            {
+                finalPos.transform.Rotate(input.rotate * rotateSpeed * Time.deltaTime, Space.World);
+            }
+        }
+        else {
+
+            finalPos.transform.eulerAngles = Vector3.zero;
+        }
     }
     private void LateUpdate()
     {

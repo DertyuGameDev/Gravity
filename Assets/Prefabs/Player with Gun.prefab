@@ -23428,7 +23428,7 @@ MonoBehaviour:
   input: {fileID: 8396966409781130112}
   animator: {fileID: 131912154170148387}
   target: {fileID: 0}
-  finalPos: {fileID: 0}
+  finalPos: {fileID: 4122403128431889495}
   smooth: 0
   targetRB: {fileID: 0}
   pullModeScript: {fileID: 4911384083596668062}
@@ -23439,6 +23439,7 @@ MonoBehaviour:
   readyToUse: 1
   useCooldown: 0.3
   timeToPreserveTarget: 2
+  rotateSpeed: 50
   smoothAnim: 4
 --- !u!114 &4911384083596668062
 MonoBehaviour:
@@ -23455,7 +23456,7 @@ MonoBehaviour:
   gravityGunScript: {fileID: 3860052139698926309}
   target: {fileID: 0}
   finalPos: {fileID: 4122403128431889495}
-  smooth: 50
+  smooth: 80
 --- !u!114 &6073050655783753834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23469,7 +23470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityGunScript: {fileID: 3860052139698926309}
-  force: 20
+  force: 40
   targets: []
 --- !u!114 &1731310244376067698
 MonoBehaviour:
@@ -25928,6 +25929,7 @@ MonoBehaviour:
   jump: 0
   mouseWheel: {x: 0, y: 0}
   numericKeyPressed: 
+  rotate: {x: 0, y: 0, z: 0}
   leftClick: 0
   interact: 0
 --- !u!114 &8347402142802252345
@@ -25952,10 +25954,10 @@ MonoBehaviour:
   isGrounded: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   playerHeight: 1.7
   groundDrag: 0.4
-  jumpForce: 5
+  jumpForce: 6
   jumpCooldown: 0.4
   airMultiplier: 0.6
   fallMultiplier: 1.4
