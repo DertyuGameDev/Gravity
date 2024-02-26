@@ -11,16 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Finaly Levels/Tutorial.unity
     guid: e096803d37b21624cb2d42f82af2787c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Finaly Levels/1 level.unity
     guid: e64898851b6270c4fb89f7eb69edcdd2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Finaly Levels/2 level.unity
     guid: 4af4896bbd46cb441a07651738817a2f
   - enabled: 1
     path: Assets/Scenes/Finaly Levels/3 level.unity
     guid: bfea0fd882e481045959f760d29dd8bd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Finaly Levels/4 level.unity
     guid: cdc6389230d8bbb45a8b63a9a8d8eeed
   m_configObjects: {}

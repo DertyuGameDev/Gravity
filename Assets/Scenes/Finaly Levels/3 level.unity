@@ -1117,6 +1117,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2018651850147654416, guid: 6c110b8b5371a2d45b8e08e1561fab8b, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8983677533204303686, guid: 6c110b8b5371a2d45b8e08e1561fab8b, type: 3}
       propertyPath: m_Name
       value: TempleDoor
