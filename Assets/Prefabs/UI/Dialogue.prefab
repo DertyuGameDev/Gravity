@@ -50,22 +50,26 @@ MonoBehaviour:
   - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
       consequat.
-    duration: 2
+    duration: 14
     color: {r: 0.9176471, g: 0.6, b: 0.6, a: 0}
     fontStyle: 0
+    audioClip: {fileID: 8300000, guid: bc9e3f8d4eeee134ba249fe0a17eb26a, type: 3}
   - text: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    duration: 3
+    duration: 7
     color: {r: 0.7137255, g: 0.8431373, b: 0.65882355, a: 0}
     fontStyle: 2
+    audioClip: {fileID: 8300000, guid: c0d32c80fc28e5d4fbe1a2d0d00df35b, type: 3}
   - text: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     duration: 2
     color: {r: 0.6431373, g: 0.7607844, b: 0.9568628, a: 0}
     fontStyle: 1
+    audioClip: {fileID: 0}
   - text: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
       ut aliquip ex ea commodo consequat.
     duration: 2
     color: {r: 1, g: 1, b: 1, a: 0}
     fontStyle: 0
+    audioClip: {fileID: 0}
 --- !u!114 &2683920224848979076
 MonoBehaviour:
   m_ObjectHideFlags: 0

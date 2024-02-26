@@ -11,6 +11,10 @@ public class FreezeMode : MonoBehaviour
     [Header("Config")]
     [SerializeField] GameObject target;
     [SerializeField] float secondsFreeze;
+    
+    [Header("Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip freezeClip;
     public void Fire()
     {
         SelectTarget();
@@ -20,6 +24,9 @@ public class FreezeMode : MonoBehaviour
         if (ObjectDetection.getSelected() == null)
             return;
 
+        audioSource.clip = freezeClip;
+        audioSource.Play();
+        
         target = ObjectDetection.getSelected().gameObject;
 
         

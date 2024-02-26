@@ -14,21 +14,23 @@ public class PullMode : MonoBehaviour
     [Header("Pull Config")]
     [SerializeField] Transform finalPos;
     [SerializeField] float smooth;
-    [SerializeField] float smoothRotation;
-    [SerializeField] Vector3 rotationForPull = Vector3.zero;
-    [SerializeField] float maxDistance;
-    Vector3 velRef;
+    Vector3 velRef, rotationId = Vector3.zero;
     Rigidbody targetRB;
+
+    [Header("Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip pullClip;
 
     private void Update()
     {
-        finalPos.rotation = Quaternion.Euler(rotationForPull);
+        finalPos.rotation = Quaternion.Euler(rotationId);
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
 
         if (target != null)
             PullTarget(newDelta);
     }
+
     public void Fire()
     {
         if (target == null)
@@ -36,37 +38,36 @@ public class PullMode : MonoBehaviour
         else
             DeselectTarget();
     }
+
     void SelectTarget()
     {
         if (ObjectDetection.getSelected() == null)
             return;
 
-        if (gravityGunScript.TargetIsFreeze())
-            gravityGunScript.target.GetComponent<FreezeCheck>().Defrost();
+        audioSource.clip = pullClip;
+        audioSource.Play();
 
-        if (Mathf.Abs(Vector3.Distance(ObjectDetection.getSelected().transform.position, this.transform.position)) < maxDistance)
-        {
-            target = ObjectDetection.getSelected().gameObject;
-            target.transform.parent = null;
-            target.GetComponent<Rigidbody>().useGravity = false;
-            target.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            targetRB = target.GetComponent<Rigidbody>();
+        target = ObjectDetection.getSelected().gameObject;
+        target.transform.parent = null;
+        target.GetComponent<Rigidbody>().useGravity = false;
+        target.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        targetRB = target.GetComponent<Rigidbody>();
 
-
-            gravityGunScript.target = target;
-            gravityGunScript.smooth = smooth;
-            gravityGunScript.finalPos = finalPos;
-            gravityGunScript.targetRB = targetRB;
-        }
+        gravityGunScript.target = target;
+        gravityGunScript.smooth = smooth;
+        gravityGunScript.finalPos = finalPos;
+        gravityGunScript.targetRB = targetRB;
     }
+
     void DeselectTarget()
     {
         if (target != null)
             target.GetComponent<Rigidbody>().useGravity = true;
         gravityGunScript.target = null;
         target = null;
-        rotationForPull = Vector3.zero;
+        rotationId = Vector3.zero;
     }
+
     void PullTarget(float delta)
     {
         if (Vector3.Distance(finalPos.transform.position, target.transform.position) > 0.5f)
@@ -74,13 +75,13 @@ public class PullMode : MonoBehaviour
         else
         {
             targetRB.velocity = Vector3.zero;
-            target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth / 10);
+            target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position,
+                ref velRef, delta * smooth / 10);
         }
-            
+
         //target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth);
-        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smoothRotation / 2);
     }
-    
+
     public void ResetValues()
     {
         target = null;

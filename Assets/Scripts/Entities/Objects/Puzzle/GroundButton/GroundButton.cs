@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class GroundButton : MonoBehaviour
 {
     private Animator _animator;
     private SwitchActivator _switchActivator;
 
-    public event Action<bool> OnButtonChangeState;
-
     private readonly List<GameObject> _objectsOnButton = new();
+
+    public UnityEvent<bool> onButtonChangeState;
 
     private void Awake()
     {
@@ -55,8 +57,8 @@ public class GroundButton : MonoBehaviour
 
     private void SetActivation(bool activation)
     {
-        Debug.Log($"Button activation: {activation}");
-        OnButtonChangeState?.Invoke(activation);
+        Debug.Log($"[GROUND BUTTON] {gameObject} changed state -> {activation}");
+        onButtonChangeState?.Invoke(activation);
         _animator.SetBool(GroundButtonAnimatorParameters.IsActivated, activation);
     }
 }

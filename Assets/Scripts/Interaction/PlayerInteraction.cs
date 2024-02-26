@@ -27,7 +27,11 @@ public class PlayerInteraction : MonoBehaviour
         var ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, playerReach))
+        var layerMask = 1 << LayerMask.NameToLayer("IgnoreRaycast");
+
+        layerMask = ~layerMask;
+
+        if (Physics.Raycast(ray, out hit, playerReach, layerMask))
         {
             if (hit.collider.CompareTag("Interactable"))
             {

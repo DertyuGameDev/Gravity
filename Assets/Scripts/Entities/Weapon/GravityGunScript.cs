@@ -7,8 +7,9 @@ public class GravityGunScript : MonoBehaviour
     [Header("External References")]
     [SerializeField] PlayerInputs input;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject[] hud;
     public GameObject target;
-    [HideInInspector] public Transform finalPos;
+    public Transform finalPos;
     Vector3 velRef = Vector3.zero;
     [HideInInspector] public float smooth;
     [HideInInspector] public Rigidbody targetRB;
@@ -25,17 +26,25 @@ public class GravityGunScript : MonoBehaviour
     [SerializeField] bool readyToUse;
     [SerializeField] float useCooldown;
     [SerializeField] float timeToPreserveTarget;
-    [SerializeField] Vector3 rotationForPull = Vector3.zero;
-    [SerializeField] float smRotation;
+    [SerializeField] float rotateSpeed;
 
     [Header("Animation")]
     [SerializeField] float smoothAnim;
     float velX;
     float velY;
-
+    Vector3 rotation;
+    public void Update()
+    {
+        if (target != null)
+        {
+            if (input.rotate != Vector3.zero)
+            {
+                target.transform.Rotate(input.rotate * rotateSpeed * Time.deltaTime);
+            }
+        }
+    }
     private void LateUpdate()
     {
-        finalPos.rotation = Quaternion.Euler(rotationForPull);
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
 
@@ -55,6 +64,7 @@ public class GravityGunScript : MonoBehaviour
         velY = Mathf.Lerp(velY,input.movement.y,Time.deltaTime * smoothAnim);
         animator.SetFloat("VelX", velX);
         animator.SetFloat("VelY", velY);
+        animator.SetBool("isPulling",pullModeScript.enabled&&target!=null);
     }
     #endregion
     #region - CHANGE MODE -
@@ -107,6 +117,9 @@ public class GravityGunScript : MonoBehaviour
 
                 freezeModeScript.enabled = false;
                 freezeModeScript.ResetValues();
+                hud[0].SetActive(true);
+                hud[1].SetActive(false);
+                hud[2].SetActive(false);
                 break;
             case 1:
                 pullModeScript.enabled = false;
@@ -120,6 +133,9 @@ public class GravityGunScript : MonoBehaviour
                 freezeModeScript.ResetValues();
 
                 Invoke(nameof(DeselectTarget), timeToPreserveTarget);
+                hud[0].SetActive(false);
+                hud[1].SetActive(true);
+                hud[2].SetActive(false);
                 break;
             case 2:
                 pullModeScript.enabled = false;
@@ -131,6 +147,9 @@ public class GravityGunScript : MonoBehaviour
                 freezeModeScript.enabled = true;
                 
                 Invoke(nameof(DeselectTarget), timeToPreserveTarget);
+                hud[0].SetActive(false);
+                hud[1].SetActive(false);
+                hud[2].SetActive(true);
                 break;
         }
     }
@@ -148,14 +167,15 @@ public class GravityGunScript : MonoBehaviour
                 break;
             case 1:
                 pushModeScript.Fire();
+                animator.SetTrigger("Push");
                 break;
             case 2:
                 freezeModeScript.Fire();
+                animator.SetTrigger("Freeze");
                 break;
         }
 
         readyToUse = false;
-        rotationForPull = Vector3.zero;
         Invoke(nameof(ResetUse), useCooldown);
     }
     void ResetUse()
@@ -166,6 +186,7 @@ public class GravityGunScript : MonoBehaviour
     #region - TARGET -
     void PullTarget(float delta)
     {
+
         if (Vector3.Distance(finalPos.transform.position, target.transform.position) > 0.5f)
             targetRB.velocity = (finalPos.transform.position - target.transform.position) * smooth * 2 * delta;
         else
@@ -173,8 +194,9 @@ public class GravityGunScript : MonoBehaviour
             targetRB.velocity = Vector3.zero;
             target.transform.position = Vector3.SmoothDamp(target.transform.position, finalPos.transform.position, ref velRef, delta * smooth / 10);
         }
-
-        target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalPos.rotation, delta * smRotation / 2);
+        Quaternion finalrot = new Quaternion();
+        //finalrot.eulerAngles = finalPos.rotation.eulerAngles + rotation.eulerAngles;
+        //target.transform.rotation = Quaternion.Lerp(target.transform.rotation, finalrot, delta * smooth / 2);
     }
     public void DeselectTarget()
     {
@@ -190,9 +212,8 @@ public class GravityGunScript : MonoBehaviour
             
         target = null;
         pullModeScript.target = null;
-        rotationForPull = Vector3.zero;
     }
-    public bool TargetIsFreeze()
+    bool TargetIsFreeze()
     {
         if (freezeModeScript.enabled)
         {

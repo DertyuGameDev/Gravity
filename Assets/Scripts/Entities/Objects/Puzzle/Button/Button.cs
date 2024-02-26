@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Button : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class Button : MonoBehaviour
     public float cooldown = 2f;
     private float _cooldownTimer;
 
-    public event Action OnButtonTriggered;
+    public UnityEvent onButtonTriggered;
 
     private void Awake()
     {
@@ -26,9 +24,9 @@ public class Button : MonoBehaviour
     {
         if (_cooldownTimer > 0) return;
 
-        Debug.Log($"{transform.gameObject.name} pressed!");
+        Debug.Log($"[SIMPLE BUTTON] {gameObject} pressed!");
         _animator.SetTrigger(ButtonAnimatorParameters.Activate);
-        OnButtonTriggered?.Invoke();
+        onButtonTriggered?.Invoke();
         _cooldownTimer = cooldown;
     }
 }

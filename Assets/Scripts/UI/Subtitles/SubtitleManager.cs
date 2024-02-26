@@ -8,6 +8,7 @@ public class SubtitleManager : MonoBehaviour
 {
     private TextMeshProUGUI _textBox;
     private Image _textBackground;
+    private AudioSource _audioSource;
 
     private readonly Queue<Subtitle> _subtitlesQueue = new();
     private bool _isProcessing;
@@ -16,6 +17,7 @@ public class SubtitleManager : MonoBehaviour
     {
         _textBox = GetComponentInChildren<TextMeshProUGUI>();
         _textBackground = GetComponentInChildren<Image>();
+        _audioSource = GetComponentInChildren<AudioSource>();
     }
 
     private void Start()
@@ -44,6 +46,9 @@ public class SubtitleManager : MonoBehaviour
             _textBox.text = currentSubtitle.text;
             _textBox.color = currentSubtitle.color;
             _textBox.fontStyle = currentSubtitle.fontStyle;
+
+            _audioSource.clip = currentSubtitle.audioClip;
+            _audioSource.Play();
 
             SetOpacity(1f);
 

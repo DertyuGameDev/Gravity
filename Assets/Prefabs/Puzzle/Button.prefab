@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5155994746722138147}
   - component: {fileID: 861521748907258824}
   - component: {fileID: 8676368226738335712}
-  - component: {fileID: 3732229875071801089}
-  m_Layer: 0
+  - component: {fileID: 738543565492008149}
+  m_Layer: 3
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3732229875071801089
+--- !u!114 &738543565492008149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 2
+  onButtonTriggered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7027986469079461439
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +302,7 @@ GameObject:
   - component: {fileID: 107908403471692829}
   - component: {fileID: 7226128123324164263}
   - component: {fileID: 5355331662481797398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trigger
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -408,7 +411,7 @@ MonoBehaviour:
   onInteraction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3732229875071801089}
+      - m_Target: {fileID: 738543565492008149}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: TriggerButton
         m_Mode: 1
