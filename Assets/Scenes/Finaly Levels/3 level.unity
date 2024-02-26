@@ -640,8 +640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0d313a7171def4cbc8fb7e5f4c7a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityGunScript: {fileID: 0}
-  rb: {fileID: 0}
+  gravityGunScript: {fileID: 1059910245}
+  rb: {fileID: 831494646}
   alreadyFreeze: 0
   timeToDefrost: 5
 --- !u!114 &831494649
@@ -656,8 +656,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6900c321c0d01a448eb8d160e6b1c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  rend: {fileID: 0}
+  obj: {fileID: 831494645}
+  rend: {fileID: 831494650}
+--- !u!23 &831494650 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 8f1bd0a8b2c540549a10eb31f51e7d79, type: 3}
+  m_PrefabInstance: {fileID: 831494644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1030251312
 PrefabInstance:
   m_ObjectHideFlags: 0
