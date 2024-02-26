@@ -48,13 +48,13 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveVel = new Vector2(rb.velocity.x, rb.velocity.z);
 
         //Movement
-        if (inputs.movement != Vector2.zero)
+        if (inputs.movement != Vector2.zero && !CanvaMain.menuOpen)
             MovePlayer(newDelta);
         else if (moveVel.magnitude != 0)
             Decelerate();
 
         //Jump
-        if (inputs.jump)
+        if (inputs.jump && !CanvaMain.menuOpen)
             StartJump();
 
         //Increase falling speed while the player is falling
