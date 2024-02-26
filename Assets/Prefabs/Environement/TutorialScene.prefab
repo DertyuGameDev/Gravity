@@ -20848,6 +20848,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8723458844970545375}
     m_Modifications:
+    - target: {fileID: 959433681282025748, guid: e6b98733641b1c84082da022b062cdc5, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7222451620210686883, guid: e6b98733641b1c84082da022b062cdc5, type: 3}
       propertyPath: m_Name
       value: Cube (1)
