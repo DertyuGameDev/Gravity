@@ -39,7 +39,7 @@ public class GravityGunScript : MonoBehaviour
         {
             if (input.rotate != Vector3.zero)
             {
-                target.transform.Rotate(input.rotate * rotateSpeed * Time.deltaTime,Space.World);
+                target.transform.Rotate(input.rotate * rotateSpeed * Time.deltaTime);
             }
         }
     }
