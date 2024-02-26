@@ -71,7 +71,10 @@ public class PullMode : MonoBehaviour
     void DeselectTarget()
     {
         if (target != null)
+        {
             target.GetComponent<Rigidbody>().useGravity = true;
+        }
+
         gravityGunScript.target = null;
         target = null;
         rotationId = Vector3.zero;

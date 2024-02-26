@@ -25,6 +25,9 @@ public class PushMode : MonoBehaviour
 
     public void Fire()
     {
+        audioSource.clip = pushClip;
+        audioSource.Play();
+        
         if (gravityGunScript.target == null)
         {
             DetectEntity();
@@ -32,7 +35,7 @@ public class PushMode : MonoBehaviour
         }
 
         GameObject obj = gravityGunScript.target;
-        
+
         gravityGunScript.target = null;
         Push(obj);
     }
@@ -42,7 +45,7 @@ public class PushMode : MonoBehaviour
         targetsInView.Clear();
         finalTargets.Clear();
 
-        // Debes añadir una capsula como colider para que detecte los posibles objetivos.
+        // Debes aï¿½adir una capsula como colider para que detecte los posibles objetivos.
         List<Detector> detectors = ObjectDetection.getInView();
 
         foreach (Detector detector in detectors)
@@ -55,15 +58,6 @@ public class PushMode : MonoBehaviour
                 finalTargets.Add(var.gameObject);
 
 
-
-
-        if (targetsInView.Count > 0)
-        {
-            audioSource.clip = pushClip;
-            audioSource.Play();
-        }
-
-       
         foreach (GameObject item in finalTargets)
             Push(item);
     }
@@ -72,9 +66,9 @@ public class PushMode : MonoBehaviour
     {
         Rigidbody rb = target.GetComponent<Rigidbody>();
         Rigidbody playerRB = GameManager.player.transform.GetChild(0).GetComponent<Rigidbody>();
-        
+
         FreezeCheck freezeCheck;
-        
+
         if (target.TryGetComponent<FreezeCheck>(out freezeCheck))
         {
             if (freezeCheck.alreadyFreeze)
