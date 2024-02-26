@@ -10,6 +10,7 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] PlayerInput input;
     [SerializeField] GravityGunScript gravityGunScript;
     [SerializeField] PlayerInteraction playerInteraction;
+    [SerializeField] CanvaMain canvaMain;
 
     [Header("Flags")]
     public Vector2 movement;
@@ -40,6 +41,9 @@ public class PlayerInputs : MonoBehaviour
     }
     void OnMouseWheel(InputValue value)
     {
+        if (CanvaMain.menuOpen)
+            return;
+
         mouseWheel = value.Get<Vector2>();
         print(mouseWheel);
         if (mouseWheel.y > 0)
@@ -49,6 +53,9 @@ public class PlayerInputs : MonoBehaviour
     }
     void OnNumericKeys(InputValue value)
     {
+        if (CanvaMain.menuOpen)
+            return;
+
         if (value.Get<Vector2>().y == 1) //1
         {
             gravityGunScript.DefineIndex(0);
@@ -66,12 +73,18 @@ public class PlayerInputs : MonoBehaviour
     {
         leftClick = value.Get<float>() > 0 ? true : false;
 
+        if (CanvaMain.menuOpen)
+            return;
+
         if (leftClick)
             gravityGunScript.Fire();
     }
     void OnInteract(InputValue value)
     {
         interact = value.Get<float>() > 0 ? true : false;
+
+        if (CanvaMain.menuOpen)
+            return;
 
         if (interact)
             playerInteraction.Interact();
@@ -80,5 +93,14 @@ public class PlayerInputs : MonoBehaviour
     void OnRotate(InputValue value)
     {
         rotate = value.Get<Vector3>();
+    }
+    void OnEsc(InputValue value)
+    {
+        bool esc = value.Get<float>() > 0 ? true : false;
+        if (esc)
+            if (!CanvaMain.menuOpen)
+                canvaMain.OpenMenu();
+            else 
+                canvaMain.CloseMenu();
     }
 }
