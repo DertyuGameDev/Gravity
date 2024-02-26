@@ -29,12 +29,19 @@ public class FreezeMode : MonoBehaviour
         
         target = ObjectDetection.getSelected().gameObject;
 
-        gravityGunScript.target = target;
+        
 
-        FreezeCheck script = target.GetComponent<FreezeCheck>();
-        script.gravityGunScript = gravityGunScript;
-        script.enabled = true;
-        script.FreezeTarget(secondsFreeze);
+        FreezeCheck script;
+        if (target.TryGetComponent<FreezeCheck>(out script))
+        {
+            gravityGunScript.target = target;
+
+            script.gravityGunScript = gravityGunScript;
+            script.enabled = true;
+            script.FreezeTarget(secondsFreeze);
+        }
+        else
+            print("It can't freeze");
     }
     public void ResetValues()
     {

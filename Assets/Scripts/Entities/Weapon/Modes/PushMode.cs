@@ -10,6 +10,7 @@ public class PushMode : MonoBehaviour
     [Header("Config")]
     [SerializeField] float force;
     [SerializeField] List<Detector> targets;
+    [SerializeField] int limit;
 
     [Header("Audio")]
     [SerializeField] AudioSource audioSource;
@@ -45,7 +46,10 @@ public class PushMode : MonoBehaviour
 
         foreach (Detector item in targets)
         {
-            Push(item.gameObject);
+            if (Mathf.Abs(Vector3.Distance(this.transform.position, item.transform.position)) < limit)
+            {
+                Push(item.gameObject);
+            }
         }
     }
 
