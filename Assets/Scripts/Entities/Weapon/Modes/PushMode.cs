@@ -10,6 +10,7 @@ public class PushMode : MonoBehaviour
     [Header("Config")]
     [SerializeField] float force;
     [SerializeField] List<Detector> targets;
+    [SerializeField] int limit;
 
     [Header("Audio")]
     [SerializeField] AudioSource audioSource;
@@ -29,6 +30,7 @@ public class PushMode : MonoBehaviour
         }
 
         GameObject obj = gravityGunScript.target;
+        
         gravityGunScript.target = null;
         Push(obj);
     }
@@ -45,15 +47,31 @@ public class PushMode : MonoBehaviour
 
         foreach (Detector item in targets)
         {
-            Push(item.gameObject);
+            if (Mathf.Abs(Vector3.Distance(this.transform.position, item.transform.position)) < limit)
+            {
+                Push(item.gameObject);
+            }
         }
     }
 
     void Push(GameObject target)
     {
         Rigidbody rb = target.GetComponent<Rigidbody>();
+        Rigidbody playerRB = GameManager.player.transform.GetChild(0).GetComponent<Rigidbody>();
+        
+        FreezeCheck freezeCheck;
+        
+        if (target.TryGetComponent<FreezeCheck>(out freezeCheck))
+        {
+            if (freezeCheck.alreadyFreeze)
+                freezeCheck.Defrost();
+        }
+
+        rb.velocity = Vector3.zero;
         rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
         rb.useGravity = true;
+
+        playerRB.AddForce(-Camera.main.transform.forward * 2, ForceMode.Impulse);
     }
 
     public void ResetValues()
