@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("External References")]
     [SerializeField] PlayerInputs inputs;
     [SerializeField] Rigidbody rb;
+    [SerializeField] Animator animator;
 
     [Header("Move Config")]
     [SerializeField] float walkSpeed;
@@ -117,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
         Jump();
         isReadyToJump = false;
-
+        animator.SetTrigger("Jump");
         Invoke(nameof(ResetJump), jumpCooldown);
     }
     void Jump()
@@ -129,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
     void ResetJump()
     {
         isReadyToJump = true;
+        animator.SetTrigger("Landed");
     }
     void FallAmplify(float delta)
     {

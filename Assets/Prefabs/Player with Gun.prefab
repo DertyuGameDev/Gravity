@@ -26617,6 +26617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputs: {fileID: 8396966409781130112}
   rb: {fileID: 2774589526462708000}
+  animator: {fileID: 131912154170148387}
   walkSpeed: 350
   maxWalkSpeed: 4
   runSpeed: 500
