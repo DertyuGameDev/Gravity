@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9660791feaa8de442a8f7098ab1a3fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polarity: 0
   strength: -100
 --- !u!1 &7692921555440380904
 GameObject:
@@ -90,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9660791feaa8de442a8f7098ab1a3fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polarity: 0
   strength: -100
 --- !u!1 &9118589973676837115
 GameObject:

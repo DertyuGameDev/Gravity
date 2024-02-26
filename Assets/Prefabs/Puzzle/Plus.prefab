@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9660791feaa8de442a8f7098ab1a3fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polarity: 0
   strength: 100
 --- !u!1 &2308931410446212061
 GameObject:
@@ -171,7 +170,7 @@ MonoBehaviour:
   poles:
   - {fileID: 3345913068803347058}
   - {fileID: 8861169168186631386}
-  interactDistance: 200
+  interactDistance: 30
   rb: {fileID: 2331476219701668315}
 --- !u!54 &2331476219701668315
 Rigidbody:
@@ -258,5 +257,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9660791feaa8de442a8f7098ab1a3fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polarity: 0
   strength: 100

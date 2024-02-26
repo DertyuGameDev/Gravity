@@ -38,15 +38,15 @@ public class Magnet : MonoBehaviour
             float denom = poles[0].strength / d;
             float denom1 = poles[1].strength / d;
 
-            iresultant[0] += -(-1 ^ (poles[0].polarity - m.poles[0].polarity)) * m.poles[0].strength * denom * Vector3.Normalize(poles[0].transform.position - m.poles[0].transform.position);
-            iresultant[1] += -(-1 ^ (poles[1].polarity - m.poles[1].polarity)) * m.poles[1].strength * denom1 * Vector3.Normalize(poles[1].transform.position - m.poles[1].transform.position);
-            iresultant[1] += -(-1 ^ (poles[1].polarity - m.poles[0].polarity)) * m.poles[0].strength * denom1 * Vector3.Normalize(poles[1].transform.position - m.poles[0].transform.position);
-            iresultant[0] += -(-1 ^ (poles[0].polarity - m.poles[1].polarity)) * m.poles[1].strength * denom * Vector3.Normalize(poles[0].transform.position - m.poles[1].transform.position);
+            iresultant[0] +=  m.poles[0].strength * denom * Vector3.Normalize(poles[0].transform.position - m.poles[0].transform.position);
+            iresultant[1] +=  m.poles[1].strength * denom1 * Vector3.Normalize(poles[1].transform.position - m.poles[1].transform.position);
+            iresultant[1] +=  m.poles[0].strength * denom1 * Vector3.Normalize(poles[1].transform.position - m.poles[0].transform.position);
+            iresultant[0] +=  m.poles[1].strength * denom * Vector3.Normalize(poles[0].transform.position - m.poles[1].transform.position);
 
 
         }
 
-            rb.AddForceAtPosition(-iresultant[0] * Time.smoothDeltaTime, poles[0].transform.position);
-            rb.AddForceAtPosition(-iresultant[1] * Time.smoothDeltaTime, poles[1].transform.position);
+            rb.AddForceAtPosition(iresultant[0] * Time.smoothDeltaTime, poles[0].transform.position);
+            rb.AddForceAtPosition(iresultant[1] * Time.smoothDeltaTime, poles[1].transform.position);
     }
 }
