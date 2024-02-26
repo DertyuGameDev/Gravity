@@ -30,6 +30,7 @@ public class PushMode : MonoBehaviour
         }
 
         GameObject obj = gravityGunScript.target;
+        
         gravityGunScript.target = null;
         Push(obj);
     }
@@ -56,8 +57,21 @@ public class PushMode : MonoBehaviour
     void Push(GameObject target)
     {
         Rigidbody rb = target.GetComponent<Rigidbody>();
+        Rigidbody playerRB = GameManager.player.transform.GetChild(0).GetComponent<Rigidbody>();
+        
+        FreezeCheck freezeCheck;
+        
+        if (target.TryGetComponent<FreezeCheck>(out freezeCheck))
+        {
+            if (freezeCheck.alreadyFreeze)
+                freezeCheck.Defrost();
+        }
+
+        rb.velocity = Vector3.zero;
         rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
         rb.useGravity = true;
+
+        playerRB.AddForce(-Camera.main.transform.forward * 2, ForceMode.Impulse);
     }
 
     public void ResetValues()

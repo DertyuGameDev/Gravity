@@ -40,8 +40,6 @@ public class FreezeMode : MonoBehaviour
             script.enabled = true;
             script.FreezeTarget(secondsFreeze);
         }
-        else
-            print("It can't freeze");
     }
     public void ResetValues()
     {

@@ -48,6 +48,15 @@ public class PullMode : MonoBehaviour
         audioSource.Play();
 
         target = ObjectDetection.getSelected().gameObject;
+
+        FreezeCheck freezeCheck;
+
+        if (target.TryGetComponent<FreezeCheck>(out freezeCheck))
+        {
+            if (freezeCheck.alreadyFreeze)
+                freezeCheck.Defrost();
+        }
+
         target.transform.parent = null;
         target.GetComponent<Rigidbody>().useGravity = false;
         target.GetComponent<Rigidbody>().velocity = Vector3.zero;
