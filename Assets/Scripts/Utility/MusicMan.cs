@@ -5,8 +5,8 @@ using UnityEngine;
 public class MusicMan : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static List<AudioSource> music;
-    public static List<AudioSource> sfx;
+    public static List<AudioSource> music = new List<AudioSource>();
+    public static List<AudioSource> sfx = new List<AudioSource>();
 
     public static MusicMan instance;
 
