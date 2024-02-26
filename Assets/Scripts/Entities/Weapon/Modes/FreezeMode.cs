@@ -24,8 +24,7 @@ public class FreezeMode : MonoBehaviour
         if (ObjectDetection.getSelected() == null)
             return;
 
-        audioSource.clip = freezeClip;
-        audioSource.Play();
+        
         
         target = ObjectDetection.getSelected().gameObject;
 
@@ -36,6 +35,10 @@ public class FreezeMode : MonoBehaviour
         {
             gravityGunScript.target = target;
 
+            gravityGunScript.animator.SetTrigger("Freeze");
+            audioSource.clip = freezeClip;
+            audioSource.Play();
+            
             script.gravityGunScript = gravityGunScript;
             script.enabled = true;
             script.FreezeTarget(secondsFreeze);

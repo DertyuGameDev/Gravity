@@ -25,8 +25,7 @@ public class PushMode : MonoBehaviour
 
     public void Fire()
     {
-        audioSource.clip = pushClip;
-        audioSource.Play();
+        
         
         if (gravityGunScript.target == null)
         {
@@ -75,6 +74,11 @@ public class PushMode : MonoBehaviour
                 freezeCheck.Defrost();
         }
 
+        audioSource.clip = pushClip;
+        audioSource.Play();
+
+        gravityGunScript.animator.SetTrigger("Push");
+        
         rb.velocity = Vector3.zero;
         rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
         rb.useGravity = true;
