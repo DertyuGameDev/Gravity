@@ -41,15 +41,22 @@ public class FreezeCheck : MonoBehaviour
             rb.useGravity = false;
             alreadyFreeze = true;
         }
+        /*
+        else
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.freezeRotation = true;
+            rb.useGravity = false;
+        }*/
     }
     public void Defrost()
     {
+        alreadyFreeze = false;
         rb.freezeRotation = false;
         rb.angularVelocity = previousRot;
         rb.velocity = previousVel;
         rb.useGravity = true;
-        alreadyFreeze = false;
-
         if (gravityGunScript.target == gameObject)
             gravityGunScript.target = null;
 
