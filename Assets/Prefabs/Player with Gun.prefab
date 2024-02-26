@@ -24138,6 +24138,7 @@ MonoBehaviour:
   gravityGunScript: {fileID: 3860052139698926309}
   force: 40
   targets: []
+  limit: 50
   audioSource: {fileID: 1130569841790966531}
   pushClip: {fileID: 8300000, guid: f54dd66c3d6f21a4b8fabc7370059b03, type: 3}
 --- !u!114 &1731310244376067698
@@ -30539,7 +30540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee58abc234d2f34e8a92d3c9f957fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reachDistance: 100
+  reachDistance: 52.8
 --- !u!114 &4192424940432395560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30565,7 +30566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: {fileID: 7955938109144826741}
-  playerReach: 2
+  playerReach: 5
 --- !u!1 &8584088190038475141
 GameObject:
   m_ObjectHideFlags: 0
