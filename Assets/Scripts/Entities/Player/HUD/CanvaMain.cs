@@ -59,24 +59,27 @@ public class CanvaMain : MonoBehaviour
     }
     void ShowMusicValue()
     {
-        
+        MusicVal.text = (MusicMan.getMusicVol() * 100f).ToString();
+        SFXVal.text = (MusicMan.getSFXVol() * 100f).ToString();
     }
     public void IncreaseMusic()
     {
-
+        MusicMan.setMusicVol(MusicMan.getMusicVol() + 0.1f);
         ShowMusicValue();
     }
     public void DecreaseMusic()
     {
-
+        MusicMan.setMusicVol(MusicMan.getMusicVol() - 0.1f);
         ShowMusicValue();
     }
     public void IncreaseSFX()
     {
+        MusicMan.setSFXVol(MusicMan.getSFXVol() + 0.1f);
         ShowMusicValue();
     }
     public void DecreaseSFX()
     {
+        MusicMan.setSFXVol(MusicMan.getSFXVol() - 0.1f);
         ShowMusicValue();
     }
 }
