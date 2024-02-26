@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        fade = GameObject.FindGameObjectWithTag("fade").GetComponent<Animator>();
+        //fade = GameObject.FindGameObjectWithTag("fade").GetComponent<Animator>();
     }
 
     // Update is called once per frame
