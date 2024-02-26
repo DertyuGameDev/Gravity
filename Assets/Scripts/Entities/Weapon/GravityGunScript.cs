@@ -6,7 +6,7 @@ public class GravityGunScript : MonoBehaviour
 {
     [Header("External References")]
     [SerializeField] PlayerInputs input;
-    [SerializeField] Animator animator;
+    public Animator animator;
     [SerializeField] GameObject[] hud;
     public GameObject target;
     public Transform finalPos;
@@ -167,11 +167,11 @@ public class GravityGunScript : MonoBehaviour
                 break;
             case 1:
                 pushModeScript.Fire();
-                animator.SetTrigger("Push");
+                
                 break;
             case 2:
                 freezeModeScript.Fire();
-                animator.SetTrigger("Freeze");
+                
                 break;
         }
 
