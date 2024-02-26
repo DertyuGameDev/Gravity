@@ -48,6 +48,16 @@ public class MusicMan : MonoBehaviour
         reload();
     }
 
+    public static float getMusicVol()
+    {
+        return musicVolume;
+    }
+
+    public static float getSFXVol()
+    {
+        return sfxVolume;
+    }
+
     private static void reload() {
         foreach (AudioSource a in music) {
             a.volume = musicVolume;
