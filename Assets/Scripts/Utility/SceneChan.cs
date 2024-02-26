@@ -14,7 +14,11 @@ public class SceneChan : MonoBehaviour
         StartCoroutine(chan(sc));
 
     }
+    public void changeNoAnim()
+    {
+        SceneManager.LoadScene(sc);
 
+    }
     public IEnumerator chan(string stc)
     {
         yield return new WaitForSeconds(1);
