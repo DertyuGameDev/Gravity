@@ -1,0 +1,295 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &657022323329955586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[0].text
+      value: 'After depleting all of Earth''s natural resources, humans embarked
+        on a journey to find a new home in deep space. On this journey though, they
+        discovered some planets here and there that were suitable for life, but they
+        also discovered something that... they shouldn''t have. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[1].text
+      value: 'Ever heard of the Alethans? Yeah, I didn''t think so. They are the
+        people responsible for you being in that camp right now. They''re ruthless,
+        powerful. They were an alien species that we encountered during our first
+        trips out of Earth. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[2].text
+      value: 'And they warned us or like this sector space is not for colonizing.
+        It is our sector and the human leaders at the time blinded by greed just
+        generalize like generally having a huge ego decided that they''re just going
+        to attack an alien messengership '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[3].text
+      value: 'And the response was ruthless. They actually attacked an entire human
+        settlement that you''re in and... they decided to take you guys to the camp
+        that you''re at. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[4].text
+      value: I can only assume that you somehow came up with scraps or something.
+        There's no way you could have built what you built without their scraps.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[5].text
+      value: Well, you have it. Your likelihood of surviving just tripled. I hope
+        that you get out. We can talk later, but...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[6].text
+      value: 'Good luck. I don''t know, like I don''t know where the hell you are.
+        So as long as you can make it out and send a distress beacon, we can try
+        to find you... It''s looking grim for the colony though, so just be safe. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[7].text
+      value: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[0].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[0].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[0].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[1].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[1].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[1].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[2].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[2].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[2].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[3].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[3].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[3].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[4].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[4].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[4].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[5].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[5].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[5].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[6].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[6].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[6].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[7].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[7].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[7].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[0].duration
+      value: 19.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[1].duration
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[2].duration
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[3].duration
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[4].duration
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[5].duration
+      value: 8.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[6].duration
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[7].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ed1b95a8f8c9017458c5d5c6d6bb2071, type: 3}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[0].fontStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[1].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 70b3f07b24f229f4aa2db1d3a6a2cc3f, type: 3}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[2].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f873fc10fa3be744bce04813f445ee9, type: 3}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[2].fontStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[3].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fd1e8ef0e4719844a8a835c7ba4fd1cc, type: 3}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[3].fontStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[4].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 09eea6a49c6fab74fbccac098294acf0, type: 3}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[4].fontStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[5].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3dc1277719b19ad4e8e4b738ae9723b3, type: 3}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[5].fontStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[6].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eab91eda99c37bc439fd0483a6d691ef, type: 3}
+    - target: {fileID: 1918094944134386960, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: subtitles.Array.data[6].fontStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683920224848979076, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: startDialogueAfter
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.70872456
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7072041
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.61703706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919074388614980344, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922551283096840116, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
+      propertyPath: m_Name
+      value: DialogueIntroduction Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b345c5f8c2a22b4db2d2bcaf8c254ba, type: 3}
