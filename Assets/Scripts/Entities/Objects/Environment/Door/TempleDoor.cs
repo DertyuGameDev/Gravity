@@ -1,29 +1,41 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TempleDoor : MonoBehaviour
 {
     private Animator _animator;
+    private AudioSource _audioSource;
+
+    [SerializeField] private AudioClip doorSound;
 
     private bool _isOpen;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.clip = doorSound;
     }
 
     public void SwitchDoorState()
     {
         _isOpen = !_isOpen;
         UpdateAnimatorParameter();
+        PlaySound();
     }
 
-    public void SetDoorState(bool isOpen)
+    public void SetDoorState(bool newIsOpen)
     {
-        _isOpen = isOpen;
+        if (newIsOpen == _isOpen) return;
+
+        _isOpen = newIsOpen;
         UpdateAnimatorParameter();
+        PlaySound();
+    }
+
+    private void PlaySound()
+    {
+        _audioSource.Stop();
+        _audioSource.Play();
     }
 
     private void UpdateAnimatorParameter()
