@@ -25678,7 +25678,7 @@ MonoBehaviour:
   gravityGunScript: {fileID: 3860052139698926309}
   target: {fileID: 0}
   finalPos: {fileID: 4122403128431889495}
-  smooth: 80
+  smooth: 150
   audioSource: {fileID: 1130569841790966531}
   pullClip: {fileID: 8300000, guid: 9894a6a5f6dabc4448f00327ca3a7f93, type: 3}
 --- !u!114 &6073050655783753834
