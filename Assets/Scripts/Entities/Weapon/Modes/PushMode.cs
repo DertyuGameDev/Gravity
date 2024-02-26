@@ -9,7 +9,9 @@ public class PushMode : MonoBehaviour
 
     [Header("Config")]
     [SerializeField] float force;
-    [SerializeField] List<Detector> targets;
+    [SerializeField] List<GameObject> finalTargets;
+    [SerializeField] Collider[] colTargets;
+    [SerializeField] List<GameObject> targetsInView;
     [SerializeField] int limit;
 
     [Header("Audio")]
@@ -18,7 +20,7 @@ public class PushMode : MonoBehaviour
 
     private void Update()
     {
-        targets = ObjectDetection.getInView();
+        colTargets = Physics.OverlapCapsule(transform.position, transform.position + transform.forward * 10f, 2.8f);
     }
 
     public void Fire()
@@ -37,21 +39,33 @@ public class PushMode : MonoBehaviour
 
     void DetectEntity()
     {
-        targets = ObjectDetection.getInView();
+        targetsInView.Clear();
+        finalTargets.Clear();
 
-        if (targets.Count > 0)
+        // Debes añadir una capsula como colider para que detecte los posibles objetivos.
+        List<Detector> detectors = ObjectDetection.getInView();
+
+        foreach (Detector detector in detectors)
+            targetsInView.Add(detector.gameObject);
+
+        colTargets = Physics.OverlapCapsule(transform.position, transform.position + transform.forward * 10f, 1.5f);
+
+        foreach (Collider var in colTargets)
+            if (targetsInView.Contains(var.gameObject))
+                finalTargets.Add(var.gameObject);
+
+
+
+
+        if (targetsInView.Count > 0)
         {
             audioSource.clip = pushClip;
             audioSource.Play();
         }
 
-        foreach (Detector item in targets)
-        {
-            if (Mathf.Abs(Vector3.Distance(this.transform.position, item.transform.position)) < limit)
-            {
-                Push(item.gameObject);
-            }
-        }
+       
+        foreach (GameObject item in finalTargets)
+            Push(item);
     }
 
     void Push(GameObject target)
@@ -76,6 +90,8 @@ public class PushMode : MonoBehaviour
 
     public void ResetValues()
     {
-        targets = null;
+        finalTargets.Clear();
+        targetsInView.Clear();
+        colTargets = null;
     }
 }
