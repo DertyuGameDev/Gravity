@@ -37,7 +37,7 @@ public class GravityGunScript : MonoBehaviour
     {
         if (target != null)
         {
-            if (input.rotate != Vector3.zero)
+            if (input.rotate != Vector3.zero && !CanvaMain.menuOpen)
             {
                 target.transform.Rotate(input.rotate * rotateSpeed * Time.deltaTime);
             }
