@@ -5,8 +5,8 @@ using UnityEngine;
 public class MusicMan : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static List<AudioSource> music;
-    public static List<AudioSource> sfx;
+    public static List<AudioSource> music = new List<AudioSource>();
+    public static List<AudioSource> sfx = new List<AudioSource>();
 
     public static MusicMan instance;
 
@@ -46,6 +46,16 @@ public class MusicMan : MonoBehaviour
     {
         sfxVolume = a;
         reload();
+    }
+
+    public static float getMusicVol()
+    {
+        return musicVolume;
+    }
+
+    public static float getSFXVol()
+    {
+        return sfxVolume;
     }
 
     private static void reload() {

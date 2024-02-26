@@ -28,7 +28,8 @@ public class CameraLook : MonoBehaviour
         //This help when the V-Sync is desactivated
         float newDelta = 1.0f - (float)System.Math.Pow(0.95, Time.deltaTime * 60.0f);
 
-        Look(newDelta);
+        if (!CanvaMain.menuOpen)
+            Look(newDelta);
     }
     void Look(float delta)
     {
