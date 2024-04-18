@@ -23,55 +23,62 @@ public class PlayerInputs : MonoBehaviour
     public bool leftClick;
     public bool interact;
 
-    void OnLook(InputValue value)
+
+    public static PlayerInputs instance;
+
+    private void Awake()
     {
-        look = value.Get<Vector2>();
+        instance = this;
     }
-    void OnMove(InputValue value)
+    public void OnLook(InputAction.CallbackContext ctx)
     {
-        movement = value.Get<Vector2>();
+        look = ctx.ReadValue<Vector2>();
     }
-    void OnSprint(InputValue value)
+    public void OnMove(InputAction.CallbackContext ctx)
     {
-        sprint = value.Get<float>() > 0 ? true : false;
+        movement = ctx.ReadValue<Vector2>();
     }
-    void OnJump(InputValue value)
+    public void OnSprint(InputAction.CallbackContext ctx)
     {
-        jump = value.Get<float>() > 0 ? true : false;
+        sprint = ctx.ReadValueAsButton();
     }
-    void OnMouseWheel(InputValue value)
+    public void OnJump(InputAction.CallbackContext ctx)
+    {
+        jump = ctx.ReadValueAsButton();
+    }
+    public void OnMouseWheel(InputAction.CallbackContext ctx)
     {
         if (CanvaMain.menuOpen)
             return;
 
-        mouseWheel = value.Get<Vector2>();
+        mouseWheel = ctx.ReadValue<Vector2>();
         print(mouseWheel);
         if (mouseWheel.y > 0)
             gravityGunScript.IncreaseIndex();
         else if (mouseWheel.y < 0)
             gravityGunScript.DecreaseIndex();
     }
-    void OnNumericKeys(InputValue value)
+    public void OnNumericKeys(InputAction.CallbackContext ctx)
     {
         if (CanvaMain.menuOpen)
             return;
-
-        if (value.Get<Vector2>().y == 1) //1
+        Vector2 inp = ctx.ReadValue<Vector2>();
+        if (inp.y == 1) //1
         {
             gravityGunScript.DefineIndex(0);
         }
-        else if (value.Get<Vector2>().y == -1) //2
+        else if (inp.y == -1) //2
         {
             gravityGunScript.DefineIndex(1);
         }
-        else if (value.Get<Vector2>().x == -1) //3
+        else if (inp.x == -1) //3
         {
             gravityGunScript.DefineIndex(2);
         }
     }
-    void OnLeftClick(InputValue value)
+    public void OnLeftClick(InputAction.CallbackContext ctx)
     {
-        leftClick = value.Get<float>() > 0 ? true : false;
+        leftClick = ctx.ReadValueAsButton();
 
         if (CanvaMain.menuOpen)
             return;
@@ -79,9 +86,9 @@ public class PlayerInputs : MonoBehaviour
         if (leftClick)
             gravityGunScript.Fire();
     }
-    void OnInteract(InputValue value)
+    public void OnInteract(InputAction.CallbackContext ctx)
     {
-        interact = value.Get<float>() > 0 ? true : false;
+        interact = ctx.ReadValueAsButton();
 
         if (CanvaMain.menuOpen)
             return;
@@ -90,13 +97,13 @@ public class PlayerInputs : MonoBehaviour
             playerInteraction.Interact();
     }
 
-    void OnRotate(InputValue value)
+    public void OnRotate(InputAction.CallbackContext ctx)
     {
-        rotate = value.Get<Vector3>();
+        rotate = ctx.ReadValue<Vector3>();
     }
-    void OnEsc(InputValue value)
+    public void OnEsc(InputAction.CallbackContext ctx)
     {
-        bool esc = value.Get<float>() > 0 ? true : false;
+        bool esc = ctx.ReadValueAsButton();
         if (esc)
             if (!CanvaMain.menuOpen)
                 canvaMain.OpenMenu();

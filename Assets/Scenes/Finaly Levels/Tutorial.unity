@@ -397,15 +397,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4421546473901006370, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -57.41
+      value: -41.8
       objectReference: {fileID: 0}
     - target: {fileID: 4421546473901006370, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.96
+      value: 3.24
       objectReference: {fileID: 0}
     - target: {fileID: 4421546473901006370, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 50.21
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 4421546473901006370, guid: 9597b2e31436e574293b7ad960da7e4a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -954,7 +954,7 @@ PrefabInstance:
     - target: {fileID: 3743707763114471244, guid: 65aedea42f7b84b41a94fae3dafaf13c, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+      objectReference: {fileID: 1120483001784104788, guid: 8f1bd0a8b2c540549a10eb31f51e7d79, type: 3}
     - target: {fileID: 4671794947531630120, guid: 65aedea42f7b84b41a94fae3dafaf13c, type: 3}
       propertyPath: m_CollisionDetection
       value: 2

@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Sprint",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "7d4558e8-0c80-4bee-9c51-827d7344d16d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Look",
@@ -52,7 +52,7 @@
                 },
                 {
                     "name": "Interact",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "f20ae54e-419b-47a7-99ae-7674e6ce2f1d",
                     "expectedControlType": "Button",
                     "processors": "",
